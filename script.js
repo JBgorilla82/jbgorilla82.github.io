@@ -48,4 +48,55 @@
   }));
 
 
+  const contactForm = document.querySelector('#contact-form');
+  if (contactForm) {
+    const feedback = document.querySelector('#form-feedback');
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton ? submitButton.innerHTML : '';
+
+    contactForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!contactForm.reportValidity()) return;
+
+      if (feedback) {
+        feedback.textContent = 'Sending your enquiry…';
+        feedback.classList.remove('is-success', 'is-error');
+      }
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending…';
+      }
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { 'Accept': 'application/json' }
+        });
+        const result = await response.json();
+
+        if (!response.ok || result.success === 'false' || result.success === false) {
+          throw new Error(result.message || 'The enquiry could not be sent.');
+        }
+
+        contactForm.reset();
+        if (feedback) {
+          feedback.textContent = 'Thank you — your enquiry has been submitted successfully. I’ll be in touch as soon as I can.';
+          feedback.classList.add('is-success');
+        }
+      } catch (error) {
+        if (feedback) {
+          feedback.textContent = 'Sorry, your enquiry could not be sent just now. Please try again or email info@gorilla82.co.uk directly.';
+          feedback.classList.add('is-error');
+        }
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.innerHTML = originalButtonText;
+        }
+      }
+    });
+  }
+
+
 })();
