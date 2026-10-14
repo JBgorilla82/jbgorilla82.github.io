@@ -47,24 +47,5 @@
     }
   }));
 
-  const form = document.querySelector('#contact-form');
-  const feedback = document.querySelector('#form-feedback');
-  if (form) {
-    form.addEventListener('submit', event => {
-      event.preventDefault();
-      const data = new FormData(form);
-      const name = String(data.get('name') || '').trim();
-      const business = String(data.get('business') || '').trim();
-      const email = String(data.get('email') || '').trim();
-      const project = String(data.get('project') || '').trim();
-      const message = String(data.get('message') || '').trim();
-      const recipient = 'info@gorilla82.co.uk'; // Replace with your real email address.
-      const subject = encodeURIComponent(`Website enquiry from ${business}`);
-      const body = encodeURIComponent(
-        `Hi Gorilla 82,\n\nMy name is ${name} and my business is ${business}.\nEmail: ${email}\nProject: ${project}\n\n${message || 'I would like to discuss a website project.'}\n\nThanks,\n${name}`
-      );
-      if (feedback) feedback.textContent = 'Opening your email app with the enquiry prepared…';
-      window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
-    });
-  }
+
 })();
