@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G82 Plumbing | Reliable Local Plumbers in Dumbarton & West Dunbartonshire</title>
+  <meta name="description" content="G82 Plumbing – professional, friendly plumbing and heating services in Dumbarton, Alexandria, Helensburgh and surrounding areas. Checkatrade-rated. Call today for a free quote.">
+  
+  <!-- Google Fonts: distinctive, non-generic pairing -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ========== DESIGN TOKENS ========== */
+    :root {
+      --color-navy: #0A2540;
+      --color-navy-dark: #06182B;
+      --color-teal: #0D9488;
+      --color-teal-dark: #0F766E;
+      --color-teal-light: #14B8A6;
+      --color-cream: #F8F6F2;
+      --color-white: #FFFFFF;
+      --color-text: #1E293B;
+      --color-text-muted: #64748B;
+      --color-border: #E2E8F0;
+      --color-star: #F59E0B;
+      
+      --font-heading: 'Manrope', system-ui, sans-serif;
+      --font-body: 'Source Sans 3', system-ui, sans-serif;
+      
+      --space-xs: 0.5rem;
+      --space-sm: 0.75rem;
+      --space-md: 1.25rem;
+      --space-lg: 2rem;
+      --space-xl: 3rem;
+      --space-2xl: 4.5rem;
+      --space-3xl: 6rem;
+      
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      
+      --shadow-sm: 0 1px 3px rgba(10, 37, 64, 0.08);
+      --shadow-md: 0 4px 12px rgba(10, 37, 64, 0.1);
+      --shadow-lg: 0 12px 32px rgba(10, 37, 64, 0.12);
+      
+      --max-width: 1120px;
+      --header-height: 72px;
+    }
+
+    /* ========== RESET & BASE ========== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: var(--font-body);
+      font-size: 1.0625rem;
+      line-height: 1.6;
+      color: var(--color-text);
+      background: var(--color-cream);
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    
+    h1, h2, h3, h4 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--color-navy);
+    }
+    
+    :focus-visible {
+      outline: 3px solid var(--color-teal);
+      outline-offset: 3px;
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* ========== UTILITIES ========== */
+    .container {
+      width: min(100% - 2rem, var(--max-width));
+      margin-inline: auto;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.875rem 1.5rem;
+      border-radius: var(--radius-md);
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
+    }
+    
+    .btn:active { transform: translateY(1px); }
+    
+    .btn-primary {
+      background: var(--color-teal);
+      color: var(--color-white);
+    }
+    .btn-primary:hover,
+    .btn-primary:focus-visible {
+      background: var(--color-teal-dark);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: var(--color-navy);
+      border-color: var(--color-navy);
+    }
+    .btn-secondary:hover,
+    .btn-secondary:focus-visible {
+      background: var(--color-navy);
+      color: var(--color-white);
+    }
+    
+    .btn-white {
+      background: var(--color-white);
+      color: var(--color-navy);
+    }
+    .btn-white:hover {
+      background: var(--color-cream);
+    }
+    
+    .section-label {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-teal);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .section-title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      margin-bottom: var(--space-md);
+    }
+    
+    .section-intro {
+      font-size: 1.125rem;
+      color: var(--color-text-muted);
+      max-width: 36rem;
+    }
+
+    /* ========== HEADER ========== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--color-white);
+      border-bottom: 1px solid var(--color-border);
+      height: var(--header-height);
+    }
+    
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      gap: var(--space-md);
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.35rem;
+      color: var(--color-navy);
+    }
+    
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--color-teal);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 800;
+    }
+    
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+    
+    .header-phone {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--color-navy);
+      display: none;
+    }
+    
+    @media (min-width: 640px) {
+      .header-phone { display: block; }
+    }
+    
+    .nav-toggle {
+      display: none; /* pure CSS single-page, simple nav */
+    }
+    
+    .main-nav {
+      display: none;
+    }
+    
+    @media (min-width: 900px) {
+      .main-nav {
+        display: flex;
+        gap: 1.75rem;
+        font-family: var(--font-heading);
+        font-weight: 500;
+        font-size: 0.95rem;
+      }
+      .main-nav a:hover { color: var(--color-teal); }
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      background: linear-gradient(160deg, var(--color-navy) 0%, var(--color-navy-dark) 100%);
+      color: var(--color-white);
+      padding: var(--space-2xl) 0 var(--space-3xl);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 80% 20%, rgba(13, 148, 136, 0.18) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    
+    .hero-grid {
+      display: grid;
+      gap: var(--space-xl);
+      position: relative;
+    }
+    
+    @media (min-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: center;
+      }
+    }
+    
+    .hero-content h1 {
+      color: var(--color-white);
+      font-size: clamp(2rem, 5vw, 3.1rem);
+      font-weight: 800;
+      margin-bottom: var(--space-md);
+      letter-spacing: -0.02em;
+    }
+    
+    .hero-content p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: var(--space-lg);
+      max-width: 32rem;
+    }
+    
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-lg);
+    }
+    
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      align-items: center;
+      font-size: 0.9rem;
+      opacity: 0.85;
+    }
+    
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    
+    .trust-item strong { color: var(--color-teal-light); }
+    
+    .hero-card {
+      background: var(--color-white);
+      color: var(--color-text);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .hero-card h2 {
+      font-size: 1.25rem;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .hero-card p {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-md);
+    }
+    
+    .hero-card .phone-big {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--color-navy);
+      display: block;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .hero-card .phone-big:hover { color: var(--color-teal); }
+
+    /* ========== SERVICES ========== */
+    .services {
+      padding: var(--space-3xl) 0;
+      background: var(--color-white);
+    }
+    
+    .services-header {
+      text-align: center;
+      margin-bottom: var(--space-xl);
+    }
+    
+    .services-header .section-intro {
+      margin-inline: auto;
+    }
+    
+    .services-grid {
+      display: grid;
+      gap: var(--space-md);
+      grid-template-columns: 1fr;
+    }
+    
+    @media (min-width: 600px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    
+    @media (min-width: 900px) {
+      .services-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    
+    .service-card {
+      background: var(--color-cream);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    
+    .service-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-teal);
+    }
+    
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--color-navy);
+      color: var(--color-white);
+      border-radius: var(--radius-md);
+      display: grid;
+      place-items: center;
+      font-size: 1.4rem;
+      margin-bottom: var(--space-md);
+    }
+    
+    .service-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: var(--space-xs);
+    }
+    
+    .service-card p {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+    }
+
+    /* ========== WORK / GALLERY ========== */
+    .work {
+      padding: var(--space-3xl) 0;
+      background: var(--color-cream);
+    }
+    
+    .work-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: var(--space-md);
+      margin-bottom: var(--space-xl);
+    }
+    
+    .work-grid {
+      display: grid;
+      gap: var(--space-md);
+      grid-template-columns: 1fr;
+    }
+    
+    @media (min-width: 600px) {
+      .work-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    
+    @media (min-width: 900px) {
+      .work-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    
+    .work-item {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      background: var(--color-navy);
+    }
+    
+    .work-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    
+    .work-item:hover img { transform: scale(1.04); }
+    
+    .work-caption {
+      position: absolute;
+      inset: auto 0 0 0;
+      background: linear-gradient(transparent, rgba(10, 37, 64, 0.85));
+      color: white;
+      padding: var(--space-md);
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    /* ========== REVIEWS ========== */
+    .reviews {
+      padding: var(--space-3xl) 0;
+      background: var(--color-white);
+    }
+    
+    .reviews-header {
+      text-align: center;
+      margin-bottom: var(--space-xl);
+    }
+    
+    .checkatrade-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #F0FDF4;
+      color: #166534;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      margin-bottom: var(--space-md);
+    }
+    
+    .reviews-grid {
+      display: grid;
+      gap: var(--space-md);
+      grid-template-columns: 1fr;
+    }
+    
+    @media (min-width: 700px) {
+      .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    
+    @media (min-width: 1000px) {
+      .reviews-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    
+    .review-card {
+      background: var(--color-cream);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .stars {
+      color: var(--color-star);
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .review-text {
+      font-size: 1rem;
+      flex-grow: 1;
+      margin-bottom: var(--space-md);
+    }
+    
+    .review-meta {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      border-top: 1px solid var(--color-border);
+      padding-top: var(--space-sm);
+    }
+    
+    .review-meta strong {
+      color: var(--color-navy);
+      display: block;
+    }
+
+    /* ========== WHY US ========== */
+    .why-us {
+      padding: var(--space-3xl) 0;
+      background: var(--color-navy);
+      color: var(--color-white);
+    }
+    
+    .why-us .section-label { color: var(--color-teal-light); }
+    .why-us .section-title { color: var(--color-white); }
+    
+    .why-grid {
+      display: grid;
+      gap: var(--space-lg);
+      margin-top: var(--space-xl);
+    }
+    
+    @media (min-width: 700px) {
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    
+    @media (min-width: 1000px) {
+      .why-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    
+    .why-item h3 {
+      color: var(--color-white);
+      font-size: 1.15rem;
+      margin-bottom: var(--space-xs);
+    }
+    
+    .why-item p {
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+    
+    .why-number {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--color-teal-light);
+      margin-bottom: var(--space-xs);
+    }
+
+    /* ========== CONTACT / CTA ========== */
+    .contact {
+      padding: var(--space-3xl) 0;
+      background: var(--color-cream);
+    }
+    
+    .contact-grid {
+      display: grid;
+      gap: var(--space-xl);
+    }
+    
+    @media (min-width: 800px) {
+      .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+      }
+    }
+    
+    .contact-info h2 {
+      margin-bottom: var(--space-md);
+    }
+    
+    .contact-info p {
+      margin-bottom: var(--space-md);
+      color: var(--color-text-muted);
+    }
+    
+    .contact-details {
+      display: grid;
+      gap: var(--space-md);
+      margin-top: var(--space-lg);
+    }
+    
+    .contact-detail strong {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--color-teal);
+      margin-bottom: 0.25rem;
+    }
+    
+    .contact-detail a {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--color-navy);
+    }
+    
+    .contact-detail a:hover { color: var(--color-teal); }
+    
+    .contact-form-card {
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--color-border);
+    }
+    
+    .contact-form-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: var(--space-md);
+    }
+    
+    .form-group {
+      margin-bottom: var(--space-md);
+    }
+    
+    .form-group label {
+      display: block;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 0.35rem;
+      color: var(--color-navy);
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      background: var(--color-cream);
+      transition: border-color 0.2s;
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--color-teal);
+      box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
+    }
+    
+    .form-group textarea { min-height: 110px; resize: vertical; }
+    
+    .form-note {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      margin-top: var(--space-sm);
+    }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      background: var(--color-navy-dark);
+      color: rgba(255,255,255,0.8);
+      padding: var(--space-xl) 0 var(--space-lg);
+      font-size: 0.9rem;
+    }
+    
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: var(--space-md);
+      align-items: center;
+    }
+    
+    .footer-brand {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      color: white;
+      font-size: 1.1rem;
+    }
+    
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    
+    .footer-links a:hover { color: var(--color-teal-light); }
+    
+    .footer-bottom {
+      margin-top: var(--space-lg);
+      padding-top: var(--space-md);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+
+    /* ========== STICKY MOBILE CTA ========== */
+    .mobile-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--color-navy);
+      padding: 0.75rem 1rem;
+      z-index: 90;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+    }
+    
+    @media (max-width: 639px) {
+      .mobile-cta {
+        display: flex;
+        gap: 0.75rem;
+      }
+      .mobile-cta .btn { flex: 1; }
+      body { padding-bottom: 70px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="G82 Plumbing home">
+        <span class="logo-mark" aria-hidden="true">G</span>
+        G82 Plumbing
+      </a>
+      
+      <nav class="main-nav" aria-label="Main">
+        <a href="#services">Services</a>
+        <a href="#work">Our Work</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      
+      <div class="header-actions">
+        <a href="tel:+447800123456" class="header-phone">07800 123 456</a>
+        <a href="tel:+447800123456" class="btn btn-primary">Call Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1 id="hero-heading">Local plumbers you can trust in Dumbarton &amp; beyond</h1>
+          <p>Professional, friendly plumbing and heating services for homes and businesses across West Dunbartonshire. From emergency leaks to full bathroom installs — we turn up on time and leave the job tidy.</p>
+          
+          <div class="hero-ctas">
+            <a href="tel:+447800123456" class="btn btn-primary">Call 07800 123 456</a>
+            <a href="#contact" class="btn btn-white">Request a Quote</a>
+          </div>
+          
+          <div class="hero-trust">
+            <div class="trust-item"><strong>Checkatrade</strong> rated</div>
+            <div class="trust-item">Fully insured</div>
+            <div class="trust-item">Local to G82</div>
+          </div>
+        </div>
+        
+        <div class="hero-card">
+          <h2>Need a plumber today?</h2>
+          <p>Speak to a real person. No call centres. We cover Dumbarton, Alexandria, Helensburgh, Balloch and surrounding areas.</p>
+          <a href="tel:+447800123456" class="phone-big">07800 123 456</a>
+          <p style="font-size:0.9rem; margin-bottom:1rem;">Mon–Fri 8am–6pm · Emergency call-outs available</p>
+          <a href="#contact" class="btn btn-primary" style="width:100%;">Get a free quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SERVICES ========== -->
+    <section class="services" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="services-header">
+          <span class="section-label">What we do</span>
+          <h2 id="services-heading" class="section-title">Plumbing &amp; heating services</h2>
+          <p class="section-intro">From urgent repairs to planned installations, we handle the full range of domestic and light commercial plumbing work.</p>
+        </div>
+        
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">⚡</div>
+            <h3>Emergency Plumbing</h3>
+            <p>Burst pipes, major leaks, blocked drains and no-hot-water call-outs. Fast response across the G82 area.</p>
+          </article>
+          
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🔥</div>
+            <h3>Boilers &amp; Heating</h3>
+            <p>Boiler repairs, servicing, replacements and full central heating systems. Gas Safe registered engineers.</p>
+          </article>
+          
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🛁</div>
+            <h3>Bathrooms</h3>
+            <p>Complete bathroom installations, suites, showers, tiling preparation and wet rooms. Clean, professional finish.</p>
+          </article>
+          
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🔧</div>
+            <h3>General Plumbing</h3>
+            <p>Taps, toilets, radiators, outdoor taps, washing machine connections and everyday repairs done properly.</p>
+          </article>
+          
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🏠</div>
+            <h3>New Builds &amp; Renovations</h3>
+            <p>First and second fix plumbing for extensions, loft conversions and full property renovations.</p>
+          </article>
+          
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">💧</div>
+            <h3>Drains &amp; Waste</h3>
+            <p>Blocked drains, waste pipe repairs and external drainage work. We leave everything clean and working.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== OUR WORK ========== -->
+    <section class="work" id="work" aria-labelledby="work-heading">
+      <div class="container">
+        <div class="work-header">
+          <div>
+            <span class="section-label">Recent projects</span>
+            <h2 id="work-heading" class="section-title">Work we’re proud of</h2>
+          </div>
+          <a href="#contact" class="btn btn-secondary">Discuss your project</a>
+        </div>
+        
+        <div class="work-grid">
+          <figure class="work-item">
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&h=450&fit=crop" alt="Modern bathroom with walk-in shower and tiled walls" width="600" height="450">
+            <figcaption class="work-caption">Full bathroom suite – Dumbarton</figcaption>
+          </figure>
+          
+          <figure class="work-item">
+            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=450&fit=crop" alt="New combi boiler installed in utility cupboard" width="600" height="450">
+            <figcaption class="work-caption">Boiler replacement – Alexandria</figcaption>
+          </figure>
+          
+          <figure class="work-item">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=450&fit=crop" alt="Clean under-sink plumbing installation" width="600" height="450">
+            <figcaption class="work-caption">Kitchen plumbing – Helensburgh</figcaption>
+          </figure>
+          
+          <figure class="work-item">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=450&fit=crop" alt="New radiator and heating pipework" width="600" height="450">
+            <figcaption class="work-caption">Central heating upgrade – Balloch</figcaption>
+          </figure>
+          
+          <figure class="work-item">
+            <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=600&h=450&fit=crop" alt="Luxury walk-in shower with rainfall head" width="600" height="450">
+            <figcaption class="work-caption">Walk-in shower install – Cardross</figcaption>
+          </figure>
+          
+          <figure class="work-item">
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=450&fit=crop" alt="Professional plumber working on pipework" width="600" height="450">
+            <figcaption class="work-caption">Emergency pipe repair – G82</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== REVIEWS (Checkatrade style) ========== -->
+    <section class="reviews" id="reviews" aria-labelledby="reviews-heading">
+      <div class="container">
+        <div class="reviews-header">
+          <div class="checkatrade-badge" aria-label="Checkatrade rated">
+            ★ Checkatrade reviews
+          </div>
+          <h2 id="reviews-heading" class="section-title">What local customers say</h2>
+          <p class="section-intro" style="margin-inline:auto;">Real feedback from homeowners in Dumbarton and the surrounding area. We invite every customer to leave a review on Checkatrade.</p>
+        </div>
+        
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-text">“Called out for a burst pipe on a Sunday evening. Arrived within the hour, fixed the problem cleanly and explained everything. Left the place spotless. Highly recommend.”</p>
+            <div class="review-meta">
+              <strong>Mrs Henderson</strong>
+              Dumbarton · Emergency repair
+            </div>
+          </article>
+          
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-text">“Had a full bathroom suite fitted. The team were polite, tidy and finished exactly when they said they would. The new shower is fantastic. Great communication throughout.”</p>
+            <div class="review-meta">
+              <strong>James &amp; Fiona M.</strong>
+              Alexandria · Bathroom installation
+            </div>
+          </article>
+          
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-text">“Boiler stopped working in the middle of winter. G82 Plumbing diagnosed it quickly, ordered the part and had us back up and running the next day. Fair price and no fuss.”</p>
+            <div class="review-meta">
+              <strong>David R.</strong>
+              Helensburgh · Boiler repair
+            </div>
+          </article>
+          
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-text">“Replaced all the radiators and upgraded the system. Worked around our family schedule and kept everything clean. Very professional and friendly — would use again without hesitation.”</p>
+            <div class="review-meta">
+              <strong>Sarah K.</strong>
+              Balloch · Heating upgrade
+            </div>
+          </article>
+          
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-text">“Blocked drain that other firms couldn’t clear. Sorted in under an hour and advised us how to prevent it happening again. Honest and straightforward service.”</p>
+            <div class="review-meta">
+              <strong>Tom P.</strong>
+              Cardross · Drain clearance
+            </div>
+          </article>
+          
+          <article class="review-card">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review-text">“From the first phone call to the finished job everything was clear and professional. They turned up when promised and the quality of work is excellent. Local firm you can trust.”</p>
+            <div class="review-meta">
+              <strong>Linda S.</strong>
+              Dumbarton · General plumbing
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== WHY CHOOSE US ========== -->
+    <section class="why-us" aria-labelledby="why-heading">
+      <div class="container">
+        <span class="section-label">Why G82 Plumbing</span>
+        <h2 id="why-heading" class="section-title">Built on trust, not sales pitches</h2>
+        
+        <div class="why-grid">
+          <div class="why-item">
+            <div class="why-number">01</div>
+            <h3>Local &amp; accountable</h3>
+            <p>We’re based in the G82 area. You deal with the same people who do the work — not a distant call centre.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-number">02</div>
+            <h3>Clear pricing</h3>
+            <p>We explain the work and the cost before we start. No hidden extras or pressure tactics.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-number">03</div>
+            <h3>Tidy &amp; respectful</h3>
+            <p>We protect your floors, clean up after ourselves and treat your home the way we’d want ours treated.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-number">04</div>
+            <h3>Checkatrade feedback</h3>
+            <p>We actively invite reviews so you can see real experiences from local customers before you book.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <span class="section-label">Get in touch</span>
+          <h2 id="contact-heading" class="section-title">Ready to book or need a quote?</h2>
+          <p>Call us for the quickest response, or send a message and we’ll get back to you the same working day.</p>
+          
+          <div class="contact-details">
+            <div class="contact-detail">
+              <strong>Phone</strong>
+              <a href="tel:+447800123456">07800 123 456</a>
+            </div>
+            <div class="contact-detail">
+              <strong>Email</strong>
+              <a href="mailto:hello@g82plumbing.co.uk">hello@g82plumbing.co.uk</a>
+            </div>
+            <div class="contact-detail">
+              <strong>Areas covered</strong>
+              <span>Dumbarton, Alexandria, Helensburgh, Balloch, Cardross, Renton and surrounding West Dunbartonshire</span>
+            </div>
+            <div class="contact-detail">
+              <strong>Hours</strong>
+              <span>Monday–Friday 8am–6pm<br>Emergency call-outs available</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form-card">
+          <h3>Request a free quote</h3>
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="service">What do you need?</label>
+              <select id="service" name="service">
+                <option value="">Please select</option>
+                <option>Emergency repair</option>
+                <option>Boiler / heating</option>
+                <option>Bathroom installation</option>
+                <option>General plumbing</option>
+                <option>Other / not sure</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Brief details</label>
+              <textarea id="message" name="message" placeholder="Tell us a little about the job..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;">Send message</button>
+            <p class="form-note">This is a demo form. In a live site it would connect to your email or booking system.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">G82 Plumbing</div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 G82 Plumbing. Local plumbers serving Dumbarton &amp; West Dunbartonshire. Fully insured.</p>
+    </div>
+  </footer>
+
+  <!-- Sticky mobile call bar -->
+  <div class="mobile-cta" aria-label="Quick call">
+    <a href="tel:+447800123456" class="btn btn-primary">Call Now</a>
+    <a href="#contact" class="btn btn-white">Get Quote</a>
+  </div>
+
+</body>
+</html>

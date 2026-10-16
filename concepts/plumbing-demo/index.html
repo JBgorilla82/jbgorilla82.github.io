@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>G82 Plumbing | Local plumbers in Dumbarton &amp; West Dunbartonshire</title>
+  <meta name="description" content="Concept design for G82 Plumbing – professional, friendly plumbing and heating services. Showcase work, services and Checkatrade-style feedback. Designed by gorilla82.co.uk">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest: #183b2b;
+      --deep: #10271d;
+      --leaf: #c7e1b5;
+      --leaf-bright: #d8f0bc;
+      --paper: #f6f5ef;
+      --muted: #687268;
+      --line: #dfe3d8;
+      --ink: #19231c;
+      --white: #fffefa;
+      --star: #e8b923;
+      --neon: #6feb3d;
+      --neon-dim: #2bd40f;
+
+      --sans: "DM Sans", system-ui, sans-serif;
+      --display: "Manrope", system-ui, sans-serif;
+
+      --max: 1120px;
+      --header-h: 76px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; height: auto; object-fit: cover; }
+    img { color: var(--muted); background: #e4e8df; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.15; letter-spacing: -0.03em; }
+    :focus-visible { outline: 3px solid var(--leaf); outline-offset: 3px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+    }
+
+    /* ========== CONCEPT BARS (required on all templates) ========== */
+    .concept-bar {
+      min-height: 48px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 20px;
+      background: var(--neon);
+      color: #0a1a08;
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.025em;
+      padding: 6px 20px;
+      line-height: 1.3;
+    }
+    .concept-brand {
+      display: flex;
+      align-items: center;
+      justify-self: start;
+      width: 30px;
+    }
+    .concept-brand img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+    .concept-notice {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+    }
+    .concept-credit {
+      justify-self: end;
+      text-align: right;
+      text-transform: none;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+    .concept-bar a {
+      color: #0a1a08;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .concept-bar a:hover { opacity: 0.85; }
+
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
+
+    /* ========== HEADER ========== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+    }
+    .header-inner {
+      height: var(--header-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border: 1.5px solid var(--forest);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-family: Georgia, serif;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--forest);
+    }
+    .brand-text b {
+      display: block;
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+    }
+    .brand-text small {
+      display: block;
+      font-size: 9px;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.14em;
+      margin-top: 3px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .nav-links a:not(.btn):hover { color: var(--forest); }
+
+    .btn {
+      display: inline-block;
+      background: var(--forest);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 13px 18px;
+      border: 1px solid var(--forest);
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn:hover { background: var(--deep); }
+    .btn.light {
+      background: var(--leaf-bright);
+      color: var(--deep);
+      border-color: var(--leaf-bright);
+    }
+    .btn.light:hover { background: var(--leaf); }
+    .btn.ghost {
+      background: transparent;
+      color: var(--forest);
+    }
+    .btn.ghost:hover {
+      background: var(--forest);
+      color: var(--white);
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      background: var(--deep);
+      color: var(--white);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 48px;
+      align-items: center;
+      padding: 72px 0 78px;
+    }
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--leaf);
+    }
+    .eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: currentColor;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    .hero h1 {
+      font-weight: 500;
+      font-size: clamp(40px, 5.4vw, 64px);
+      letter-spacing: -0.055em;
+      margin: 22px 0 18px;
+      color: var(--white);
+    }
+    .hero h1 em {
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--leaf);
+    }
+    .hero-lede {
+      max-width: 440px;
+      color: #d1d9d0;
+      font-size: 15.5px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      margin-top: 28px;
+    }
+    .hero-actions .plain {
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      border-top: 1px solid #3a5143;
+      padding-top: 20px;
+      margin-top: 32px;
+      color: #c5d0c7;
+      font-size: 10px;
+    }
+    .hero-stats strong {
+      display: block;
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .hero-visual {
+      position: relative;
+    }
+    .hero-visual img {
+      width: 100%;
+      height: 440px;
+      border-radius: 2px;
+    }
+    .hero-label {
+      position: absolute;
+      bottom: 18px;
+      left: -18px;
+      background: var(--paper);
+      color: var(--deep);
+      padding: 14px 18px;
+      max-width: 240px;
+    }
+    .hero-label small {
+      display: block;
+      font-size: 9px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .hero-label strong {
+      font-family: Georgia, serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.25;
+    }
+
+    /* ========== INTRO ========== */
+    .intro {
+      padding: 78px 0;
+    }
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 0.5fr 1.5fr;
+      gap: 50px;
+    }
+    .tag {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #64835c;
+    }
+    .intro h2 {
+      font-weight: 500;
+      font-size: clamp(28px, 3.8vw, 44px);
+      letter-spacing: -0.04em;
+      margin: 0 0 18px;
+    }
+    .intro h2 em {
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      color: #64835c;
+    }
+    .intro-copy {
+      max-width: 720px;
+      font-size: 16px;
+      color: #536055;
+    }
+    .intro-copy p + p { margin-top: 14px; }
+
+    /* ========== SERVICES ========== */
+    .services {
+      background: #e9ede3;
+      padding: 78px 0;
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
+      margin-bottom: 36px;
+    }
+    .section-head h2 {
+      font-weight: 500;
+      font-size: clamp(28px, 3.8vw, 44px);
+      letter-spacing: -0.04em;
+      margin: 8px 0 0;
+    }
+    .section-head h2 em {
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      color: #64835c;
+    }
+    .section-head p {
+      max-width: 320px;
+      color: var(--muted);
+      font-size: 13px;
+      margin: 0;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid #dfe4d9;
+      padding: 24px 22px;
+      min-height: 180px;
+    }
+    .card small {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      color: #72866a;
+      font-weight: 700;
+    }
+    .card h3 {
+      font-size: 18px;
+      margin: 20px 0 10px;
+    }
+    .card p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* ========== WORK ========== */
+    .work {
+      padding: 78px 0;
+      background: var(--paper);
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 14px;
+    }
+    .project {
+      position: relative;
+      min-height: 240px;
+      overflow: hidden;
+      background: #dce3d5;
+    }
+    .project.big { grid-row: span 2; }
+    .project img {
+      width: 100%;
+      height: 100%;
+      min-height: 240px;
+      transition: transform 0.35s ease;
+      background: #dce3d5;
+    }
+    .project.big img { min-height: 510px; }
+    .project:hover img { transform: scale(1.03); }
+    .caption {
+      position: absolute;
+      bottom: 13px;
+      left: 13px;
+      right: 13px;
+      background: rgba(255, 254, 250, 0.94);
+      padding: 12px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .caption small {
+      display: block;
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .caption b {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    /* ========== REVIEWS ========== */
+    .reviews {
+      background: var(--forest);
+      color: white;
+      padding: 64px 0;
+    }
+    .reviews-inner {
+      display: grid;
+      grid-template-columns: 0.55fr 1.45fr;
+      gap: 42px;
+      align-items: start;
+    }
+    .reviews-score {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 48px;
+      letter-spacing: -0.05em;
+    }
+    .reviews-score small {
+      display: block;
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 600;
+      color: #c6d3c7;
+      letter-spacing: 0.04em;
+      margin-top: 6px;
+    }
+    .stars {
+      color: var(--leaf-bright);
+      letter-spacing: 0.12em;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .review-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .review-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 20px;
+    }
+    .review-card p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+    .review-card footer {
+      font-size: 11px;
+      color: #c7e1b5;
+      letter-spacing: 0.04em;
+    }
+    .review-card footer strong {
+      display: block;
+      color: white;
+      font-size: 13px;
+      margin-bottom: 2px;
+    }
+
+    /* ========== WHY / PROCESS ========== */
+    .process {
+      padding: 78px 0;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 36px;
+    }
+    .step {
+      border-top: 1px solid #cbd4c7;
+      padding-top: 18px;
+    }
+    .step small {
+      color: #66805d;
+      letter-spacing: 0.14em;
+      font-size: 10px;
+      font-weight: 700;
+    }
+    .step h3 {
+      font-size: 17px;
+      margin: 12px 0 8px;
+    }
+    .step p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* ========== CONTACT CTA ========== */
+    .cta {
+      background: var(--leaf-bright);
+      padding: 68px 0;
+    }
+    .cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 36px;
+    }
+    .cta h2 {
+      font-weight: 500;
+      font-size: clamp(26px, 3.5vw, 40px);
+      color: #193b2a;
+      letter-spacing: -0.04em;
+      margin: 8px 0 12px;
+    }
+    .cta p {
+      max-width: 520px;
+      color: #435c45;
+      font-size: 14px;
+    }
+    .cta-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-end;
+    }
+    .cta-phone {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--deep);
+    }
+    .cta-phone:hover { color: var(--forest); }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      background: var(--deep);
+      color: #eaf0e7;
+      padding: 28px 0;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .footer-inner p,
+    .footer-inner a {
+      font-size: 11px;
+      color: #c0cec0;
+    }
+    .footer-links a { margin-left: 16px; }
+    .footer-links a:hover { color: var(--leaf); }
+
+    /* ========== MOBILE ========== */
+    @media (max-width: 900px) {
+      .nav-links a:not(.btn) { display: none; }
+      .hero-grid { grid-template-columns: 1fr; padding: 48px 0 56px; gap: 36px; }
+      .hero-visual img { height: 340px; }
+      .hero-label { left: 12px; }
+      .intro-grid { grid-template-columns: 1fr; gap: 20px; }
+      .section-head { flex-direction: column; align-items: flex-start; }
+      .cards { grid-template-columns: repeat(2, 1fr); }
+      .gallery { grid-template-columns: 1fr 1fr; }
+      .project.big { grid-row: auto; }
+      .project.big img { min-height: 280px; }
+      .reviews-inner { grid-template-columns: 1fr; gap: 28px; }
+      .review-grid { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr 1fr; }
+      .cta-inner { flex-direction: column; align-items: flex-start; }
+      .cta-actions { align-items: flex-start; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: calc(100% - 28px); }
+      .brand-text b { font-size: 11px; }
+      .brand-text small { font-size: 8px; }
+      .header-inner { height: 66px; }
+      .nav-links .btn { padding: 10px 12px; font-size: 11px; }
+      .hero h1 { font-size: 38px; }
+      .cards, .gallery, .steps { grid-template-columns: 1fr; }
+      .project img, .project.big img { height: 260px; min-height: 260px; }
+      .concept-bar { font-size: 10px; padding: 6px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- REQUIRED CONCEPT BAR – TOP -->
+  <div class="concept-bar">
+    <a class="concept-brand" href="https://gorilla82.co.uk" target="_blank" rel="noopener" aria-label="Gorilla82 — websites for small businesses">
+      <img src="../../images/Gorilla-banner.jpeg" alt="Gorilla82 — websites for small businesses">
+    </a>
+    <span class="concept-notice">Concept design only · Not a working website</span>
+    <span class="concept-credit">Designed by <a href="https://gorilla82.co.uk" target="_blank" rel="noopener">gorilla82.co.uk</a></span>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="#home" class="brand" aria-label="G82 Plumbing home">
+        <span class="brand-mark" aria-hidden="true">G82</span>
+        <span class="brand-text">
+          <b>G82 PLUMBING</b>
+          <small>PLUMBING · HEATING · BATHROOMS</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#services">Services</a>
+        <a href="#work">Our work</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact" class="btn">Request a quote ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Local plumbers · Dumbarton &amp; beyond</div>
+          <h1>Reliable plumbing,<br><em>done properly</em></h1>
+          <p class="hero-lede">Professional, friendly plumbing and heating for homes across West Dunbartonshire. From emergency leaks to full bathroom installs — we turn up on time and leave the job tidy.</p>
+          <div class="hero-actions">
+            <a href="tel:+447800123456" class="btn light">Call 07800 123 456</a>
+            <a href="#contact" class="plain">Request a free quote ↓</a>
+          </div>
+          <div class="hero-stats">
+            <div><strong>Checkatrade</strong>Customer feedback</div>
+            <div><strong>Fully insured</strong>Domestic &amp; light commercial</div>
+            <div><strong>Local to G82</strong>Dumbarton &amp; surrounding</div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="https://static.wixstatic.com/media/a21caf_b7a05076dfa8416fbd9ec1c9e9d712d7~mv2.jpg/v1/fill/w_1200%2Ch_900%2Cal_c%2Cq_85/a21caf_b7a05076dfa8416fbd9ec1c9e9d712d7~mv2.jpg" alt="Plumber repairing pipework beneath a domestic sink, with plumbing tools ready for the job" width="1200" height="900" fetchpriority="high" decoding="async">
+          <div class="hero-label">
+            <small>Trusted local service</small>
+            <strong>Clear communication from first call to finished job</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro" id="about">
+      <div class="wrap intro-grid">
+        <div class="tag">01 / Local &amp; accountable</div>
+        <div>
+          <h2>Plumbing that works<br><em>for the way you live</em></h2>
+          <div class="intro-copy">
+            <p>Whether you need an urgent repair, a new boiler, or a complete bathroom, the right tradesperson makes the difference. G82 Plumbing focuses on clear communication, tidy work and honest pricing.</p>
+            <p>This concept brings services, recent work and real customer feedback together in one place so potential clients can feel confident before they pick up the phone.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="tag">02 / What we do</div>
+            <h2>From emergency call-outs<br>to <em>planned installations</em></h2>
+          </div>
+          <p>A clear overview helps visitors quickly find the service they need and take the next step with confidence.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <small>SERVICE / 01</small>
+            <h3>Emergency plumbing</h3>
+            <p>Burst pipes, major leaks, blocked drains and no-hot-water call-outs across the G82 area.</p>
+          </article>
+          <article class="card">
+            <small>SERVICE / 02</small>
+            <h3>Boilers &amp; heating</h3>
+            <p>Repairs, servicing, replacements and full central heating systems by Gas Safe engineers.</p>
+          </article>
+          <article class="card">
+            <small>SERVICE / 03</small>
+            <h3>Bathrooms</h3>
+            <p>Complete bathroom installations, suites, showers and wet rooms finished to a high standard.</p>
+          </article>
+          <article class="card">
+            <small>SERVICE / 04</small>
+            <h3>General plumbing</h3>
+            <p>Taps, toilets, radiators, outdoor taps and everyday repairs done cleanly and correctly.</p>
+          </article>
+          <article class="card">
+            <small>SERVICE / 05</small>
+            <h3>New builds &amp; renovations</h3>
+            <p>First and second fix plumbing for extensions, loft conversions and full property renovations.</p>
+          </article>
+          <article class="card">
+            <small>SERVICE / 06</small>
+            <h3>Drains &amp; waste</h3>
+            <p>Blocked drains, waste pipe repairs and external drainage — left clean and working.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="work" id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="tag">03 / Selected work</div>
+            <h2>Let the <em>work speak</em></h2>
+          </div>
+          <p>Project imagery helps a potential customer picture what is possible in their own home.</p>
+        </div>
+        <div class="gallery">
+          <article class="project big">
+            <img src="https://static.wixstatic.com/media/c7720a_bcb496d7e18c4a2a9aa4e88dfab464ed~mv2.jpg/v1/fill/w_1000%2Ch_1200%2Cal_c%2Cq_85/c7720a_bcb496d7e18c4a2a9aa4e88dfab464ed~mv2.jpg" alt="Contemporary bathroom installation with bath, vanity unit and walk-in shower" width="1000" height="1200" loading="lazy" decoding="async">
+            <div class="caption">
+              <div><small>Bathroom</small><b>Full suite install</b></div>
+              <span>↗</span>
+            </div>
+          </article>
+          <article class="project">
+            <img src="https://gasmark1.com/assets/images/_panellarge/Worcester-Gas-Safe-Installer.jpg" alt="Heating engineer working on a wall-mounted domestic boiler and pipework" width="700" height="500" loading="lazy" decoding="async">
+            <div class="caption">
+              <div><small>Heating</small><b>Boiler replacement</b></div>
+              <span>↗</span>
+            </div>
+          </article>
+          <article class="project">
+            <img src="https://a.storyblok.com/f/237253/1426x1290/91d701998c/how-to-install-a-new-radiator.png" alt="Heating installer fitting a white radiator and connecting the pipework" width="700" height="500" loading="lazy" decoding="async">
+            <div class="caption">
+              <div><small>Heating</small><b>Radiator upgrade</b></div>
+              <span>↗</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews" id="reviews">
+      <div class="wrap reviews-inner">
+        <div>
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <div class="reviews-score">
+            Checkatrade
+            <small>Customer feedback · Local to G82</small>
+          </div>
+        </div>
+        <div class="review-grid">
+          <article class="review-card">
+            <p>“Called out for a burst pipe on a Sunday. Arrived quickly, fixed it cleanly and left the place spotless. Highly recommend.”</p>
+            <footer>
+              <strong>Mrs Henderson</strong>
+              Dumbarton · Emergency repair
+            </footer>
+          </article>
+          <article class="review-card">
+            <p>“Full bathroom suite fitted. Polite, tidy and finished exactly when promised. The new shower is fantastic.”</p>
+            <footer>
+              <strong>James &amp; Fiona M.</strong>
+              Alexandria · Bathroom installation
+            </footer>
+          </article>
+          <article class="review-card">
+            <p>“Boiler failed in winter. Diagnosed quickly, ordered the part and had us running the next day. Fair price, no fuss.”</p>
+            <footer>
+              <strong>David R.</strong>
+              Helensburgh · Boiler repair
+            </footer>
+          </article>
+          <article class="review-card">
+            <p>“Replaced radiators and upgraded the system. Worked around our schedule and kept everything clean. Would use again.”</p>
+            <footer>
+              <strong>Sarah K.</strong>
+              Balloch · Heating upgrade
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="tag">04 / How it works</div>
+            <h2>From first call<br>to <em>finished job</em></h2>
+          </div>
+          <p>Clear steps make contacting a local plumber feel simple and low-pressure.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <small>STEP 01</small>
+            <h3>Get in touch</h3>
+            <p>Call or send a quick message with the job and your location.</p>
+          </article>
+          <article class="step">
+            <small>STEP 02</small>
+            <h3>We discuss the work</h3>
+            <p>Clear explanation of what’s needed and an honest price.</p>
+          </article>
+          <article class="step">
+            <small>STEP 03</small>
+            <h3>We carry out the job</h3>
+            <p>On time, tidy, and with the same people you spoke to.</p>
+          </article>
+          <article class="step">
+            <small>STEP 04</small>
+            <h3>You leave feedback</h3>
+            <p>We invite every customer to review us on Checkatrade.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contact">
+      <div class="wrap cta-inner">
+        <div>
+          <div class="tag">05 / Start a conversation</div>
+          <h2>Need a plumber in the G82 area?</h2>
+          <p>Call for the quickest response, or request a free quote for planned work across Dumbarton, Alexandria, Helensburgh, Balloch and surrounding West Dunbartonshire.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="tel:+447800123456" class="cta-phone">07800 123 456</a>
+          <a href="mailto:hello@g82plumbing.example?subject=Plumbing%20enquiry" class="btn">Request a quote ↗</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© 2026 G82 Plumbing · Concept design only</p>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#work">Our work</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- REQUIRED CONCEPT BAR – BOTTOM -->
+  <div class="concept-bar">
+    <a class="concept-brand" href="https://gorilla82.co.uk" target="_blank" rel="noopener" aria-label="Gorilla82 — websites for small businesses">
+      <img src="../../images/Gorilla-banner.jpeg" alt="Gorilla82 — websites for small businesses">
+    </a>
+    <span class="concept-notice">Concept design only · Not a working website</span>
+    <span class="concept-credit">Designed by <a href="https://gorilla82.co.uk" target="_blank" rel="noopener">gorilla82.co.uk</a></span>
+  </div>
+
+</body>
+</html>
