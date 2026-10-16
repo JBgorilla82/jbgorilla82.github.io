@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>G82 Cake Studio | Luxury Wedding &amp; Celebration Cakes in Dorset</title>
+  <meta name="description" content="Concept design for G82 Cake Studio – bespoke wedding and celebration cakes in Bournemouth, Poole &amp; Dorset. Showcase collections, flavours and client reviews. Designed by gorilla82.co.uk">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@400;500;600;700;800&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ivory: #FFFDF9;
+      --blush: #FBEDEF;
+      --mist: #EBF1EA;
+      --sage: #B4C7B3;
+      --sage-deep: #3E5744;
+      --gold: #B8963F;
+      --gold-text: #85671F;
+      --gold-grad: linear-gradient(100deg,#9C7A28,#D2B467 45%,#A8842F);
+      --ink: #2B352E;
+      --muted: #56635A;
+      --white: #ffffff;
+      --neon: #6feb3d;
+
+      --sans: "DM Sans", system-ui, sans-serif;
+      --display: "Pinyon Script", "Snell Roundhand", cursive;
+      --serif: "Cormorant Garamond", Georgia, serif;
+
+      --max: 1120px;
+      --header-h: 76px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--ivory);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; height: auto; object-fit: cover; }
+    a { color: inherit; text-decoration: none; }
+    ul, ol { list-style: none; }
+    h1, h2, h3 { font-weight: 500; line-height: 1.25; }
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+    }
+
+    /* ========== CONCEPT BARS ========== */
+    .concept-bar {
+      min-height: 48px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 20px;
+      background: var(--neon);
+      color: #0a1a08;
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.025em;
+      padding: 6px 20px;
+      line-height: 1.3;
+    }
+    .concept-brand {
+      display: flex;
+      align-items: center;
+      justify-self: start;
+      width: 30px;
+    }
+    .concept-brand img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+    .concept-notice {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+    }
+    .concept-credit {
+      justify-self: end;
+      text-align: right;
+      text-transform: none;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+    .concept-bar a {
+      color: #0a1a08;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .concept-bar a:hover { opacity: 0.85; }
+
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
+
+    /* ========== HEADER ========== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--ivory);
+      border-bottom: 2px dotted var(--gold);
+    }
+    .header-inner {
+      height: var(--header-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border: 1.5px solid var(--gold);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--gold-text);
+      background: var(--blush);
+    }
+    .brand-text b {
+      display: block;
+      font-family: var(--sans);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      color: var(--sage-deep);
+    }
+    .brand-text small {
+      display: block;
+      font-family: var(--sans);
+      font-size: 9px;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.14em;
+      margin-top: 3px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-family: var(--sans);
+    }
+    .nav-links a {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+    .nav-links a:not(.btn):hover { color: var(--gold-text); }
+
+    .btn {
+      display: inline-block;
+      background: var(--sage-deep);
+      color: var(--white);
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 13px 20px;
+      border: 1.5px solid var(--sage-deep);
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn:hover { background: var(--ivory); color: var(--sage-deep); }
+    .btn.light {
+      background: var(--blush);
+      color: var(--sage-deep);
+      border-color: var(--gold);
+    }
+    .btn.light:hover { background: var(--sage); color: var(--sage-deep); }
+
+    /* ========== HERO ========== */
+    .hero {
+      background: linear-gradient(180deg, var(--ivory) 0%, var(--blush) 100%);
+      padding: 60px 0 78px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .eyebrow {
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold-text);
+    }
+    .eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: currentColor;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    .hero h1 {
+      font-family: var(--display);
+      font-size: clamp(3.2rem, 7vw, 5.5rem);
+      line-height: 1.25; /* Fixed cropping space for script font */
+      padding-top: 0.2em; /* Prevents top ascender crop */
+      padding-bottom: 0.2em; /* Prevents bottom descender crop */
+      background: var(--gold-grad);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin: 4px 0 12px;
+    }
+    .hero-lede {
+      max-width: 460px;
+      color: var(--ink);
+      font-size: 1.35rem;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+    .hero-body {
+      margin-top: 14px;
+      max-width: 440px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      margin-top: 28px;
+    }
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      border-top: 2px dotted var(--gold);
+      padding-top: 20px;
+      margin-top: 32px;
+      color: var(--gold-text);
+      font-family: var(--sans);
+      font-size: 10px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .hero-stats strong {
+      display: block;
+      color: var(--sage-deep);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    
+    .arch-frame {
+      position: relative;
+      padding: 24px;
+      width: 100%;
+      max-width: 440px;
+      margin-inline: auto;
+    }
+    .arch-frame::before, .arch-frame::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px 999px 6px 6px;
+      pointer-events: none;
+    }
+    .arch-frame::before { inset: 0; border: 2px dotted var(--gold); }
+    .arch-frame::after { inset: 10px; border: 1.5px solid var(--sage); }
+    .arch {
+      border-radius: 999px 999px 4px 4px;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+    }
+
+    /* ========== INTRO ========== */
+    .intro {
+      padding: 78px 0;
+    }
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 0.5fr 1.5fr;
+      gap: 50px;
+    }
+    .tag {
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-text);
+    }
+    .intro h2 {
+      font-family: var(--display);
+      font-size: clamp(2.8rem, 5.5vw, 4.2rem);
+      line-height: 1.35;
+      padding-top: 0.15em;
+      padding-bottom: 0.15em;
+      background: var(--gold-grad);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 8px;
+    }
+    .intro-copy {
+      max-width: 720px;
+      font-size: 1.2rem;
+      color: var(--muted);
+    }
+    .intro-copy p + p { margin-top: 14px; }
+
+    /* ========== COLLECTIONS ========== */
+    .collections {
+      background: var(--mist);
+      padding: 78px 0;
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
+      margin-bottom: 44px;
+    }
+    .section-head h2 {
+      font-family: var(--display);
+      font-size: clamp(2.8rem, 5.5vw, 4.2rem);
+      line-height: 1.35;
+      padding-top: 0.15em;
+      padding-bottom: 0.15em;
+      background: var(--gold-grad);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .section-head p {
+      max-width: 340px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .card {
+      background: var(--ivory);
+      border: 1px solid #dce4db;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+    }
+    .card .arch-frame {
+      padding: 12px;
+      margin-bottom: 20px;
+    }
+    .card .arch-frame::after { inset: 6px; }
+    .card small {
+      font-family: var(--sans);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      color: var(--gold-text);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .card h3 {
+      font-size: 1.8rem;
+      margin: 8px 0;
+      color: var(--sage-deep);
+    }
+    .card p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    /* ========== PORTFOLIO / WORK (Using true luxury cake images) ========== */
+    .work {
+      padding: 78px 0;
+    }
+    .mosaic {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: clamp(140px, 18vw, 220px);
+      gap: 14px;
+      margin-top: 36px;
+    }
+    .mosaic .ph {
+      position: relative;
+      overflow: hidden;
+      background: var(--mist);
+    }
+    .mosaic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+    .mosaic .ph:hover img { transform: scale(1.04); }
+    .mosaic .t1 { grid-area: 1/1/3/2; }
+    .mosaic .t2 { grid-area: 2/4/4/5; }
+    .mosaic .ga { grid-area: 1/2/2/3; }
+    .mosaic .gw { grid-area: 1/3/2/5; }
+    .mosaic .gb { grid-area: 2/2/3/3; }
+    .mosaic .gc { grid-area: 2/3/3/4; }
+    .mosaic .gw2 { grid-area: 3/1/4/3; }
+    .mosaic .gd { grid-area: 3/3/4/4; }
+
+    /* ========== REVIEWS ========== */
+    .reviews {
+      background: var(--sage-deep);
+      color: var(--ivory);
+      padding: 78px 0;
+    }
+    .reviews-inner {
+      display: grid;
+      grid-template-columns: 0.55fr 1.45fr;
+      gap: 42px;
+      align-items: start;
+    }
+    .reviews-score {
+      font-family: var(--display);
+      font-size: 3.8rem;
+      color: var(--sage);
+      line-height: 1;
+      padding-top: 0.1em;
+    }
+    .reviews-score small {
+      display: block;
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 600;
+      color: #BFD0BE;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 10px;
+    }
+    .stars {
+      color: var(--gold);
+      letter-spacing: 0.12em;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+    .review-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .review-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(180, 199, 179, 0.2);
+      padding: 24px;
+    }
+    .review-card p {
+      font-style: italic;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin-bottom: 16px;
+      color: #E7EFE6;
+    }
+    .review-card footer {
+      font-family: var(--sans);
+      font-size: 11px;
+      color: var(--sage);
+      letter-spacing: 0.04em;
+    }
+    .review-card footer strong {
+      display: block;
+      color: var(--white);
+      font-size: 13px;
+      margin-bottom: 2px;
+    }
+
+    /* ========== PROCESS ========== */
+    .process {
+      padding: 78px 0;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+      margin-top: 48px;
+      position: relative;
+    }
+    .steps::before {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; top: 20px;
+      border-top: 2px dotted var(--gold);
+      z-index: 1;
+    }
+    .step {
+      position: relative;
+      padding-top: 56px;
+      z-index: 2;
+    }
+    .step-num {
+      position: absolute;
+      top: 0; left: 0;
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--ivory);
+      border: 1.5px solid var(--gold);
+      display: grid;
+      place-items: center;
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--gold-text);
+    }
+    .step h3 {
+      font-size: 1.5rem;
+      color: var(--sage-deep);
+      margin-bottom: 8px;
+    }
+    .step p {
+      font-size: 1.05rem;
+      color: var(--muted);
+    }
+
+    /* ========== CONTACT / CTA ========== */
+    .cta {
+      background: var(--blush);
+      border-top: 2px dotted var(--gold);
+      padding: 78px 0;
+    }
+    .cta-inner {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 56px;
+      align-items: start;
+    }
+    .cta h2 {
+      font-family: var(--display);
+      font-size: clamp(2.8rem, 5vw, 4rem);
+      line-height: 1.35;
+      padding-top: 0.15em;
+      padding-bottom: 0.15em;
+      background: var(--gold-grad);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin: 4px 0 12px;
+    }
+    .cta p {
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+    .form-frame {
+      border: 2px dotted var(--gold);
+      padding: 32px;
+      background: var(--ivory);
+    }
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .f-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .f-group.full { grid-column: 1 / -1; }
+    label {
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    input, select, textarea {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      color: var(--ink);
+      background: var(--white);
+      border: 1.5px solid var(--sage);
+      padding: 10px 14px;
+      width: 100%;
+    }
+    textarea { min-height: 110px; resize: vertical; }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      background: var(--sage-deep);
+      color: #E7EFE6;
+      padding: 36px 0;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+      font-family: var(--sans);
+      font-size: 11px;
+    }
+    .footer-links a {
+      margin-left: 20px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #BFD0BE;
+    }
+    .footer-links a:hover { color: var(--gold); }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 900px) {
+      .nav-links a:not(.btn) { display: none; }
+      .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+      .intro-grid { grid-template-columns: 1fr; gap: 20px; }
+      .section-head { flex-direction: column; align-items: flex-start; }
+      .cards { grid-template-columns: 1fr; max-width: 460px; margin-inline: auto; }
+      .mosaic { grid-template-columns: repeat(2, 1fr); grid-auto-rows: clamp(130px,34vw,220px); }
+      .mosaic .ph { grid-area: auto !important; }
+      .reviews-inner { grid-template-columns: 1fr; gap: 28px; }
+      .review-grid { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr 1fr; gap: 36px 24px; }
+      .steps::before { display: none; }
+      .cta-inner { grid-template-columns: 1fr; gap: 32px; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: calc(100% - 28px); }
+      .steps, form { grid-template-columns: 1fr; }
+      .concept-bar { font-size: 10px; padding: 6px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- REQUIRED CONCEPT BAR – TOP -->
+  <div class="concept-bar">
+    <a class="concept-brand" href="https://gorilla82.co.uk" target="_blank" rel="noopener" aria-label="Gorilla82 — websites for small businesses">
+      <img src="../../images/Gorilla-banner.jpeg" alt="Gorilla82 — websites for small businesses">
+    </a>
+    <span class="concept-notice">Concept design only · Not a working website</span>
+    <span class="concept-credit">Designed by <a href="https://gorilla82.co.uk" target="_blank" rel="noopener">gorilla82.co.uk</a></span>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="#home" class="brand" aria-label="G82 Cake Studio home">
+        <span class="brand-mark" aria-hidden="true">G82</span>
+        <span class="brand-text">
+          <b>G82 CAKE STUDIO</b>
+          <small>WEDDING &amp; CELEBRATION CAKES</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#collections">Collections</a>
+        <a href="#about">About</a>
+        <a href="#work">Portfolio</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact" class="btn">Enquire Date ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Bespoke Cake Design · Dorset &amp; Beyond</div>
+          <h1>Luxury cake design</h1>
+          <p class="hero-lede">Bespoke wedding and celebration cakes, handcrafted in Poole &amp; Bournemouth.</p>
+          <p class="hero-body">Every cake begins with a conversation about your event, palette, and flavours. We turn your vision into a stunning centerpiece that tastes as exceptional as it looks.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn">Enquire about your date</a>
+            <a href="#collections" class="btn light">Explore Collections</a>
+          </div>
+          <div class="hero-stats">
+            <div><strong>Personal Service</strong>Designed around your day</div>
+            <div><strong>Dorset Delivery</strong>Direct venue setup</div>
+            <div><strong>G82 Studio</strong>Bournemouth &amp; Poole</div>
+          </div>
+        </div>
+        <div>
+          <div class="arch-frame">
+            <div class="arch">
+              <img src="https://static.wixstatic.com/media/fca99e_854ae58bb7324c41b6641ff8bc5b05c3~mv2_d_4309_6475_s_4_2.jpg/v1/fill/w_445,h_668,al_c,q_80,usm_0.66_1.00_0.01/fca99e_854ae58bb7324c41b6641ff8bc5b05c3~mv2_d_4309_6475_s_4_2.jpg" alt="A luxury wedding cake from G82 Cake Studio" width="900" height="1200" fetchpriority="high">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro" id="about">
+      <div class="wrap intro-grid">
+        <div class="tag">01 / Handcrafted Elegance</div>
+        <div>
+          <h2>Centerpieces that bring<br>people together</h2>
+          <div class="intro-copy">
+            <p>A great cake should complement your styling perfectly and leave a lasting impression on your guests. At G82 Cake Studio, we focus on refined aesthetics, delicate textures, and incredible flavor combinations.</p>
+            <p>From intimate gatherings to grand wedding receptions, we handle everything from initial flavor consultations to delivery and setup at your venue across Dorset.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLLECTIONS -->
+    <section class="collections" id="collections">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="tag">02 / What We Create</div>
+            <h2>Designed around<br>your celebration</h2>
+          </div>
+          <p>Whether you desire clean minimalism or elaborate multi-tiered showpieces, each creation is tailored to your taste.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="arch-frame">
+              <div class="arch">
+                <img src="https://static.wixstatic.com/media/fca99e_1403472ec2fd483b808e4a045548d8a5~mv2_d_3934_5249_s_4_2.jpg/v1/fill/w_445,h_593,al_c,q_80,usm_0.66_1.00_0.01/fca99e_1403472ec2fd483b808e4a045548d8a5~mv2_d_3934_5249_s_4_2.jpg" alt="Simplicity collection cake" loading="lazy">
+              </div>
+            </div>
+            <small>COLLECTION / 01</small>
+            <h3>The Simplicity Line</h3>
+            <p>Clean lines, soft organic textures, and fresh floral accents. Elegant cakes that let the beauty of the occasion speak for itself.</p>
+            <a href="#contact" class="btn light">Enquire This Style</a>
+          </article>
+
+          <article class="card">
+            <div class="arch-frame">
+              <div class="arch">
+                <img src="https://static.wixstatic.com/media/fca99e_811dbcac991847089a18961ddbfa01d2~mv2_d_2400_3600_s_4_2.jpg/v1/fill/w_445,h_667,al_c,q_80,usm_0.66_1.00_0.01/fca99e_811dbcac991847089a18961ddbfa01d2~mv2_d_2400_3600_s_4_2.jpg" alt="Luxury collection cake" loading="lazy">
+              </div>
+            </div>
+            <small>COLLECTION / 02</small>
+            <h3>The Luxury Tier</h3>
+            <p>Sculpted tiers, hand-finished gold leaf details, and delicate sugar craft designed as an unforgettable wedding centerpiece.</p>
+            <a href="#contact" class="btn light">Enquire This Style</a>
+          </article>
+
+          <article class="card">
+            <div class="arch-frame">
+              <div class="arch">
+                <img src="https://static.wixstatic.com/media/fca99e_169f9fc12130445ab04cd1cbde087999~mv2.jpg/v1/fill/w_800,h_1066,al_c,q_85/photo.jpg" alt="Dessert table treats" loading="lazy">
+              </div>
+            </div>
+            <small>COLLECTION / 03</small>
+            <h3>The Dessert Bar</h3>
+            <p>Coordinated sweet treats, mini cakes, and favor bites baked with the same care and premium ingredients for your evening guests.</p>
+            <a href="#contact" class="btn light">Enquire This Style</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO / WORK (Using free stock Unsplash cake photos) -->
+    <section class="work" id="work">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <div class="tag">03 / Studio Portfolio</div>
+              <h2>Recent creations</h2>
+            </div>
+            <p>A glance at some of our favorite custom wedding and event designs from past seasons.</p>
+          </div>
+          <div class="mosaic">
+            <div class="ph t1"><img src="https://static.wixstatic.com/media/fca99e_eeb0610f049b49359b50809a6d14b085~mv2.jpg/v1/fill/w_445,h_667,al_c,q_80,usm_0.66_1.00_0.01/fca99e_eeb0610f049b49359b50809a6d14b085~mv2.jpg" alt="Tiered wedding cake presentation" loading="lazy"></div>
+            <div class="ph ga"><img src="https://static.wixstatic.com/media/fca99e_11fb818aa9ee464ea81d1a235f8a186e~mv2_d_3276_4096_s_4_2.jpg/v1/fill/w_445,h_556,al_c,q_80,usm_0.66_1.00_0.01/fca99e_11fb818aa9ee464ea81d1a235f8a186e~mv2_d_3276_4096_s_4_2.jpg" alt="Detailed gold work" loading="lazy"></div>
+            <div class="ph gw"><img src="https://static.wixstatic.com/media/fca99e_4304f8324df24251beff865dd35a9229~mv2_d_3276_4096_s_4_2.jpg/v1/fill/w_445,h_556,al_c,q_80,usm_0.66_1.00_0.01/fca99e_4304f8324df24251beff865dd35a9229~mv2_d_3276_4096_s_4_2.jpg" alt="Artisanal wedding cake design" loading="lazy"></div>
+            <div class="ph gb"><img src="https://static.wixstatic.com/media/fca99e_f8859b742d264b54a70af3d55b1d9643~mv2_d_3684_5000_s_4_2.jpg/v1/fill/w_445,h_603,al_c,q_80,usm_0.66_1.00_0.01/fca99e_f8859b742d264b54a70af3d55b1d9643~mv2_d_3684_5000_s_4_2.jpg" alt="Elegant celebration cake" loading="lazy"></div>
+            <div class="ph gc"><img src="https://static.wixstatic.com/media/fca99e_d7710bdf402a4910bb8934e46f413acc~mv2_d_4000_6000_s_4_2.jpg/v1/fill/w_445,h_667,al_c,q_80,usm_0.66_1.00_0.01/fca99e_d7710bdf402a4910bb8934e46f413acc~mv2_d_4000_6000_s_4_2.jpg" alt="Custom textured cake finish" loading="lazy"></div>
+            <div class="ph t2"><img src="https://static.wixstatic.com/media/fca99e_63da2eec4e05460585959fe5d73fcd65~mv2.jpg/v1/fill/w_445,h_556,al_c,q_80,usm_0.66_1.00_0.01/fca99e_63da2eec4e05460585959fe5d73fcd65~mv2.jpg" alt="Luxury square cake design" loading="lazy"></div>
+            <div class="ph gw2"><img src="https://static.wixstatic.com/media/fca99e_3ac009cf8cc747c89c885ef9c8f64202~mv2.jpg/v1/fill/w_445,h_667,al_c,q_80,usm_0.66_1.00_0.01/fca99e_3ac009cf8cc747c89c885ef9c8f64202~mv2.jpg" alt="Studio wedding display" loading="lazy"></div>
+            <div class="ph gd"><img src="https://static.wixstatic.com/media/fca99e_04795f3b5d9c46e7b58ebdd039691a5e~mv2.jpg/v1/fill/w_445,h_667,al_c,q_80,usm_0.66_1.00_0.01/fca99e_04795f3b5d9c46e7b58ebdd039691a5e~mv2.jpg" alt="Elegant flower cake" loading="lazy"></div>
+          </div>
+        </div>
+      </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews" id="reviews">
+      <div class="wrap reviews-inner">
+        <div>
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <div class="reviews-score">
+            5.0 Stars
+            <small>Client Testimonials · Dorset Weddings</small>
+          </div>
+        </div>
+        <div class="review-grid">
+          <article class="review-card">
+            <p>“The cake for our wedding at Kingston Maurward was absolute perfection. Not only did it match our colour theme seamlessly, but our guests haven't stopped talking about the lemon &amp; elderflower tier!”</p>
+            <footer>
+              <strong>Charlotte &amp; Thomas</strong>
+              Dorset Wedding
+            </footer>
+          </article>
+          <article class="review-card">
+            <p>“From the first tasting box to the venue setup in Poole, everything was handled with so much care and attention. Truly a work of art!”</p>
+            <footer>
+              <strong>Eleanor M.</strong>
+              Private Celebration
+            </footer>
+          </article>
+          <article class="review-card">
+            <p>“G82 Cake Studio created a 3-tier masterpiece for us. The detail on the sugar flowers was so realistic, and the chocolate praline flavor was incredible.”</p>
+            <footer>
+              <strong>Harrison &amp; Sophie</strong>
+              Bournemouth Reception
+            </footer>
+          </article>
+          <article class="review-card">
+            <p>“The dessert table setup was a massive hit with everyone. Professional, reliable, and exceptionally talented.”</p>
+            <footer>
+              <strong>Victoria K.</strong>
+              Anniversary Party
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="tag">04 / How It Works</div>
+            <h2>From first enquiry<br>to final slice</h2>
+          </div>
+          <p>A simple step-by-step process ensuring your cake planning is smooth and stress-free.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <div class="step-num">1</div>
+            <h3>Enquire</h3>
+            <p>Share your date, venue, and estimated guest numbers with us.</p>
+          </article>
+          <article class="step">
+            <div class="step-num">2</div>
+            <h3>Consultation</h3>
+            <p>Explore design ideas, colour palettes, and sample our signature flavours.</p>
+          </article>
+          <article class="step">
+            <div class="step-num">3</div>
+            <h3>Design</h3>
+            <p>Receive a tailored cake sketch and quote built around your event.</p>
+          </article>
+          <article class="step">
+            <div class="step-num">4</div>
+            <h3>Delivery</h3>
+            <p>We hand-deliver and arrange full venue setup on your morning of choice.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="cta" id="contact">
+      <div class="wrap cta-inner">
+        <div>
+          <div class="tag">05 / Reserve Your Date</div>
+          <h2>Enquire about your cake</h2>
+          <p>Dates for peak wedding season fill up quickly. Send us a message with your event details, and we will get back to you with availability and next steps.</p>
+        </div>
+        <div class="form-frame">
+          <form id="enqForm">
+            <div class="f-group">
+              <label for="name">Your Name</label>
+              <input id="name" type="text" placeholder="e.g. Sarah Jenkins">
+            </div>
+            <div class="f-group">
+              <label for="email">Email Address</label>
+              <input id="email" type="email" placeholder="e.g. sarah@example.com">
+            </div>
+            <div class="f-group">
+              <label for="date">Event Date</label>
+              <input id="date" type="date">
+            </div>
+            <div class="f-group">
+              <label for="guests">Guest Numbers</label>
+              <input id="guests" type="number" placeholder="e.g. 80">
+            </div>
+            <div class="f-group full">
+              <label for="style">Preferred Style / Collection</label>
+              <select id="style">
+                <option>The Simplicity Line</option>
+                <option>The Luxury Tier</option>
+                <option>The Dessert Bar</option>
+                <option>Bespoke / Undecided</option>
+              </select>
+            </div>
+            <div class="f-group full">
+              <label for="notes">Tell Us About Your Event</label>
+              <textarea id="notes" placeholder="Share your venue, theme, or flavour ideas..."></textarea>
+            </div>
+            <div class="f-group full">
+              <button class="btn" type="button">Send Enquiry ↗</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© 2026 G82 Cake Studio · Concept design only</p>
+      <div class="footer-links">
+        <a href="#collections">Collections</a>
+        <a href="#about">About</a>
+        <a href="#work">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- REQUIRED CONCEPT BAR – BOTTOM -->
+  <div class="concept-bar">
+    <a class="concept-brand" href="https://gorilla82.co.uk" target="_blank" rel="noopener" aria-label="Gorilla82 — websites for small businesses">
+      <img src="../../images/Gorilla-banner.jpeg" alt="Gorilla82 — websites for small businesses">
+    </a>
+    <span class="concept-notice">Concept design only · Not a working website</span>
+    <span class="concept-credit">Designed by <a href="https://gorilla82.co.uk" target="_blank" rel="noopener">gorilla82.co.uk</a></span>
+  </div>
+
+</body>
+</html>
