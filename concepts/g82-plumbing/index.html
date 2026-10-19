@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>G82 Plumbing | Gas Safe plumbing and heating, family run</title>
+<meta name="description" content="G82 Plumbing is a family-run, Gas Safe registered plumbing and heating company. Emergency callouts, boiler installs, bathrooms and full heating system design.">
+<meta name="theme-color" content="#1246a8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%231246a8'/%3E%3Crect x='10' y='40' width='44' height='6' fill='%23d6282f'/%3E%3Ctext x='32' y='36' font-family='Arial' font-weight='700' font-size='22' fill='white' text-anchor='middle'%3EG82%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!--
+  TEMPLATE NOTES (delete before going live)
+  - Replace phone, email, Gas Safe number and Checkatrade link (search "01234", "000000", "checkatrade.com/trades/").
+  - Settings and ALL photo choices are in the CONFIG / IMAGES blocks at the bottom of this file.
+  - Contact form uses mailto by default so it works on GitHub Pages. Add a Formspree URL in CONFIG for a real form.
+-->
+<style>
+:root{
+  --blue:#1246a8; --blue-d:#0d3687; --navy:#0a2358; --red:#d6282f; --red-d:#b81e25; --white:#fff;
+  --mist:#eef3fb; --mist-2:#e1e9f6; --ink:#14203a; --muted:#51607d; --line:#d3dcec;
+  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --r:12px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.65;font-size:1.0625rem;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--blue)}
+ul{margin:0;padding:0;list-style:none}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.wrap{width:min(1180px,100% - 2.5rem);margin-inline:auto}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.02;margin:0;letter-spacing:.005em}
+h2{font-size:clamp(2.3rem,5vw,3.6rem);font-weight:800;color:var(--navy);text-transform:uppercase;margin-bottom:.8rem}
+h2 em{font-style:normal;color:var(--red)}
+h3{font-size:1.6rem;font-weight:700;color:var(--navy)}
+p{margin:0 0 1rem}
+section{padding:6rem 0;position:relative}
+.alt{background:var(--mist)}
+.kicker{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--display);font-weight:700;font-size:1.1rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:.8rem}
+.kicker::before{content:"";width:34px;height:6px;background:linear-gradient(var(--blue) 0 2px,transparent 2px 3px,var(--red) 3px 6px)}
+.lede{color:var(--muted);max-width:58ch;font-size:1.1rem}
+.center{text-align:center}.center .lede{margin-inline:auto}.center .kicker{justify-content:center}
+.head{margin-bottom:3.4rem}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:var(--display);font-weight:700;font-size:1.3rem;letter-spacing:.03em;text-transform:uppercase;text-decoration:none;padding:.72rem 1.6rem;border-radius:6px;border:2px solid transparent;cursor:pointer;transition:.2s}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 8px 0 -4px var(--red-d)}
+.btn-red:hover{background:var(--red-d);transform:translateY(2px);box-shadow:0 4px 0 -2px #8f171d}
+.btn-ghost{border-color:#fff;color:#fff}.btn-ghost:hover{background:#fff;color:var(--navy)}
+.btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{background:var(--navy)}
+.btn-outline{border-color:var(--navy);color:var(--navy)}.btn-outline:hover{background:var(--navy);color:#fff}
+.btn.sm{font-size:1.1rem;padding:.5rem 1.1rem}
+
+.ic{width:1.5rem;height:1.5rem;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* image slots */
+.ph{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--mist-2),#cdd9ee)}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.ph:hover img{transform:scale(1.04)}
+.ph.noimg{display:grid;place-items:center}
+.ph.noimg svg{width:30%;max-width:120px;height:auto}
+.ph.noimg span{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-family:var(--display);font-weight:700;font-size:1.05rem;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
+
+/* HEADER */
+header.top{position:fixed;inset:0 0 auto 0;z-index:100;background:#fff;border-bottom:1px solid var(--line);transition:box-shadow .3s}
+header.top.solid{box-shadow:0 10px 26px -20px rgba(10,35,88,.6)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:76px;transition:height .3s}
+header.top.solid .bar{height:64px}
+.logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--navy)}
+.logo svg{width:48px;height:48px;flex:none}
+.logo span{font-family:var(--display);font-weight:800;font-size:1.75rem;line-height:1;text-transform:uppercase}
+.logo small{display:block;font-family:var(--body);font-weight:500;font-size:.7rem;color:var(--muted);letter-spacing:.02em;margin-top:3px;text-transform:none}
+.links{display:flex;gap:1.8rem;align-items:center}
+.links a:not(.btn){text-decoration:none;color:var(--ink);font-weight:600;font-size:.95rem;position:relative}
+.links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:3px;background:var(--red);transition:.25s}
+.links a:not(.btn):hover::after{width:100%}
+.tel{display:flex;align-items:center;gap:.6rem;font-family:var(--display);font-weight:800;font-size:1.5rem;color:var(--red);text-decoration:none;white-space:nowrap}
+.tel .ic{width:1.3rem;height:1.3rem;stroke-width:2.2}
+.burger{display:none;background:none;border:0;width:36px;height:24px;position:relative;cursor:pointer;z-index:130}
+.burger i{position:absolute;left:0;width:100%;height:3px;background:var(--navy);border-radius:2px;transition:.3s}
+.burger i:nth-child(1){top:2px}.burger i:nth-child(2){top:10px}.burger i:nth-child(3){top:18px}
+.burger.open i:nth-child(1){top:10px;transform:rotate(45deg)}
+.burger.open i:nth-child(2){opacity:0}
+.burger.open i:nth-child(3){top:10px;transform:rotate(-45deg)}
+
+/* HERO */
+.hero{background:var(--blue);color:#fff;position:relative;overflow:hidden;padding-top:76px}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 20%,rgba(255,255,255,.14) 0,transparent 45%),repeating-linear-gradient(115deg,transparent 0 46px,rgba(255,255,255,.035) 46px 92px)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:24px;background:linear-gradient(#fff 0 8px,var(--red) 8px 24px)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center;padding:5rem 0 7.5rem;position:relative;z-index:2}
+.badge-247{display:inline-flex;align-items:center;gap:.7rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);padding:.45rem 1rem .45rem .5rem;border-radius:999px;font-weight:600;font-size:.9rem;margin-bottom:1.6rem}
+.badge-247 i{width:26px;height:26px;border-radius:50%;background:var(--red);display:grid;place-items:center}
+.badge-247 i::after{content:"";width:9px;height:9px;border-radius:50%;background:#fff;animation:pulse 1.6s infinite}
+@keyframes pulse{50%{transform:scale(.45);opacity:.5}}
+.hero h1{font-size:clamp(3.2rem,8vw,6.2rem);font-weight:800;text-transform:uppercase}
+.hero h1 em{font-style:normal;color:#fff;background:linear-gradient(transparent 62%,var(--red) 62% 90%,transparent 90%);padding:0 .08em}
+.hero p{font-size:1.2rem;max-width:46ch;margin:1.5rem 0 2.2rem;color:#dbe6fb}
+.hero .actions{display:flex;flex-wrap:wrap;gap:.9rem}
+.hero-checks{display:flex;gap:1.6rem;flex-wrap:wrap;margin-top:2.4rem;font-weight:600;font-size:.95rem}
+.hero-checks span{display:flex;align-items:center;gap:.5rem}
+.hero-checks .ic{width:1.15rem;height:1.15rem;stroke:#fff;stroke-width:3;background:var(--red);border-radius:50%;padding:3px}
+.hero-vis{position:relative}
+.hero-img{aspect-ratio:4/5;border:6px solid #fff;border-radius:var(--r);box-shadow:12px 12px 0 var(--red)}
+.float{position:absolute;background:#fff;color:var(--ink);border-radius:var(--r);padding:.9rem 1.15rem;display:flex;align-items:center;gap:.8rem;box-shadow:0 24px 40px -20px rgba(0,0,0,.55);font-size:.85rem;line-height:1.3}
+.float b{display:block;font-family:var(--display);font-size:1.5rem;color:var(--navy);line-height:1}
+.float .ico{width:44px;height:44px;border-radius:10px;display:grid;place-items:center;color:#fff;background:var(--blue)}
+.float.f2 .ico{background:var(--red)}
+.f1{left:-9%;top:12%}
+.f2{right:-4%;bottom:7%}
+
+/* TRUST */
+.trust{background:#fff;border-bottom:1px solid var(--line)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;padding:2.2rem 0}
+.trust div{display:flex;gap:.9rem;align-items:center;font-weight:700;color:var(--navy);line-height:1.3}
+.trust .ico{width:52px;height:52px;border-radius:12px;background:var(--mist);color:var(--blue);display:grid;place-items:center;flex:none}
+.trust .ico.r{background:#fdecec;color:var(--red)}
+.trust .ico .ic{width:1.6rem;height:1.6rem}
+.trust span{display:block;font-weight:400;color:var(--muted);font-size:.88rem}
+
+/* SERVICES */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:2rem 1.8rem;position:relative;overflow:hidden;transition:.3s;display:flex;flex-direction:column}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(var(--blue) 0 50%,var(--red) 50%);transform:scaleY(0);transform-origin:top;transition:.35s}
+.card:hover{transform:translateY(-6px);box-shadow:0 30px 40px -28px rgba(10,35,88,.55);border-color:transparent}
+.card:hover::before{transform:scaleY(1)}
+.card .ico{width:58px;height:58px;border-radius:14px;background:var(--blue);color:#fff;display:grid;place-items:center;margin-bottom:1.2rem}
+.card.em .ico{background:var(--red)}
+.card .ico .ic{width:1.8rem;height:1.8rem}
+.card h3{margin-bottom:.6rem}
+.card p{color:var(--muted);font-size:.97rem}
+.card ul{margin-top:auto;padding-top:.6rem}
+.card li{font-size:.92rem;font-weight:600;color:var(--navy);padding-left:1.5rem;position:relative;margin-bottom:.35rem}
+.card li::before{content:"";position:absolute;left:0;top:.55em;width:12px;height:6px;border-left:3px solid var(--red);border-bottom:3px solid var(--red);transform:rotate(-45deg)}
+
+/* EMERGENCY */
+.emergency{background:var(--red);color:#fff;padding:3rem 0;position:relative;overflow:hidden}
+.emergency::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 40px,rgba(255,255,255,.06) 40px 80px)}
+.emergency .wrap{display:flex;flex-wrap:wrap;gap:1.2rem 2rem;align-items:center;justify-content:space-between;position:relative}
+.emergency h2{color:#fff;font-size:clamp(2rem,4.5vw,3.2rem);margin:0}
+.emergency p{margin:.3rem 0 0;font-size:1.1rem}
+.emergency .btn{background:#fff;color:var(--red);font-size:1.9rem;padding:.7rem 2rem}
+.emergency .btn:hover{background:var(--navy);color:#fff}
+
+/* WHY */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.why-vis{position:relative}
+.why-vis .ph{aspect-ratio:4/4.6;border-radius:var(--r);border:6px solid #fff;box-shadow:0 0 0 2px var(--navy),14px 14px 0 var(--blue)}
+.why-vis .stamp{position:absolute;right:-6%;bottom:8%;background:var(--red);color:#fff;border-radius:50%;width:140px;height:140px;display:grid;place-items:center;text-align:center;font-family:var(--display);font-weight:800;text-transform:uppercase;line-height:1;font-size:1.3rem;border:4px solid #fff;box-shadow:0 18px 30px -14px rgba(0,0,0,.5);transform:rotate(-8deg)}
+.why-vis .stamp b{display:block;font-size:2.8rem}
+.why-list{display:grid;gap:1.3rem;margin-top:2rem}
+.why-item{display:flex;gap:1rem}
+.why-item .ico{flex:0 0 50px;height:50px;border-radius:12px;background:var(--mist);color:var(--blue);display:grid;place-items:center}
+.why-item h4{font-size:1.35rem;color:var(--navy);margin-bottom:.15rem}
+.why-item p{color:var(--muted);font-size:.96rem;margin:0}
+
+/* STATS */
+.stats{background:var(--navy);color:#fff;padding:3.4rem 0}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;text-align:center}
+.stats b{display:block;font-family:var(--display);font-weight:800;font-size:3.8rem;line-height:1;color:#fff}
+.stats b i{font-style:normal;color:var(--red)}
+.stats span{color:#b4c4e6;font-size:.92rem}
+
+/* PROCESS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem;counter-reset:s}
+.step{background:#fff;border-radius:var(--r);padding:2rem 1.6rem;border:1px solid var(--line);position:relative}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:-22px;left:1.4rem;width:46px;height:46px;border-radius:50%;background:var(--red);color:#fff;font-family:var(--display);font-weight:800;font-size:1.7rem;display:grid;place-items:center;border:4px solid var(--mist)}
+.step h3{margin:.8rem 0 .4rem}
+.step p{color:var(--muted);font-size:.95rem;margin:0}
+
+/* WORK */
+.work-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:1rem;margin-bottom:2.4rem}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem}
+.grid figure{margin:0;position:relative;border-radius:var(--r);overflow:hidden;min-height:270px;cursor:zoom-in}
+.grid figure:nth-child(1){grid-column:span 4;min-height:400px}
+.grid figure:nth-child(2){grid-column:span 2}
+.grid figure:nth-child(n+3){grid-column:span 2}
+.grid .ph{position:absolute;inset:0}
+.grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.6rem 1.1rem 1rem;background:linear-gradient(transparent,rgba(10,35,88,.94));color:#fff;font-weight:600;font-size:.95rem;pointer-events:none;z-index:2}
+.grid figcaption small{display:block;font-family:var(--display);font-size:.95rem;letter-spacing:.14em;text-transform:uppercase;color:#ff9da1;font-weight:700}
+.note{font-size:.84rem;color:var(--muted);margin-top:1rem}
+.lightbox{position:fixed;inset:0;background:rgba(6,22,58,.92);z-index:400;display:none;place-items:center;padding:30px;cursor:zoom-out}
+.lightbox.open{display:grid}
+.lightbox img{max-height:86vh;max-width:min(92vw,1100px);border:6px solid #fff;border-radius:8px}
+.lightbox button{position:absolute;top:18px;right:24px;background:none;border:0;color:#fff;font-size:2.6rem;cursor:pointer;line-height:1}
+
+/* PRICES */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.pbox{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:0 26px 40px -36px rgba(10,35,88,.6)}
+.pbox .ph-head{background:var(--blue);color:#fff;padding:1.4rem 1.7rem;display:flex;align-items:center;gap:.9rem;position:relative}
+.pbox .ph-head::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:linear-gradient(#fff 0 2px,var(--red) 2px 5px)}
+.pbox.r .ph-head{background:var(--red)}
+.pbox.r .ph-head::after{background:linear-gradient(#fff 0 2px,var(--navy) 2px 5px)}
+.pbox .ph-head h3{color:#fff;font-size:1.7rem}
+.pbox .ph-head .ic{width:1.9rem;height:1.9rem}
+.prow{display:flex;gap:1rem;align-items:baseline;padding:1rem 1.7rem;border-bottom:1px solid var(--line)}
+.prow:last-child{border:0}
+.prow .n{flex:1;font-weight:600;font-size:.97rem;line-height:1.35}
+.prow .n small{display:block;font-weight:400;color:var(--muted);font-size:.84rem}
+.prow .p{font-family:var(--display);font-weight:800;font-size:1.55rem;color:var(--navy);white-space:nowrap}
+.pnote{text-align:center;margin:2.4rem auto 0;max-width:780px;color:var(--muted);font-size:.93rem}
+.pnote b{color:var(--navy)}
+
+/* REVIEWS */
+.rev-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:1.2rem;margin-bottom:2.6rem}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+blockquote{margin:0;background:#fff;border-left:6px solid var(--red);padding:1.7rem 1.6rem 1.4rem;border-radius:0 var(--r) var(--r) 0;box-shadow:0 20px 30px -26px rgba(10,35,88,.6)}
+blockquote p{font-size:1.06rem}
+.who{font-size:.92rem;color:var(--muted)}
+.who strong{color:var(--navy)}
+.stars{color:#e0a100;letter-spacing:.12em;font-size:1.1rem;margin-bottom:.5rem}
+.cc{display:inline-flex;align-items:center;gap:.7rem;background:#fff;border:2px solid var(--navy);border-radius:8px;padding:.7rem 1.1rem;text-decoration:none;color:var(--navy);font-weight:700;transition:.2s}
+.cc:hover{background:var(--navy);color:#fff}
+
+/* AREAS */
+.areas-in{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:.7rem}
+.chips span{background:#fff;border:2px solid var(--line);border-radius:999px;padding:.5rem 1.2rem;font-weight:600;color:var(--navy);transition:.25s}
+.chips span:hover{border-color:var(--red);color:var(--red)}
+
+/* FAQ */
+.faq{max-width:860px;margin:0 auto;display:grid;gap:.9rem}
+details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:0 1.5rem;transition:.25s}
+details[open]{border-color:var(--blue);box-shadow:0 18px 28px -24px var(--blue)}
+summary{cursor:pointer;list-style:none;padding:1.25rem 0;font-family:var(--display);font-weight:700;font-size:1.4rem;color:var(--navy);display:flex;justify-content:space-between;align-items:center;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:2rem;color:var(--red);line-height:1;transition:.3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);padding-bottom:1.3rem;margin:0}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-pic{aspect-ratio:4/3.3;border-radius:var(--r);border:6px solid #fff;box-shadow:0 0 0 2px var(--navy),-14px 14px 0 var(--red)}
+.facts{display:flex;flex-wrap:wrap;gap:2rem;margin-top:1.8rem}
+.facts b{display:block;font-family:var(--display);font-size:2.4rem;color:var(--red);line-height:1;text-transform:uppercase}
+.facts span{font-size:.9rem;color:var(--muted)}
+
+/* CONTACT */
+.contact{background:var(--navy);color:#fff;overflow:hidden}
+.contact::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 10% 10%,rgba(18,70,168,.6),transparent 50%)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:4.5rem;position:relative}
+.contact h2{color:#fff}
+.contact p{color:#c9d6f2}
+.hours{margin:1.6rem 0;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:.5rem 1.4rem}
+.hours li{display:flex;justify-content:space-between;gap:1rem;padding:.8rem 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:.96rem}
+.hours li:last-child{border:0}
+.hours li.today{color:#fff;font-weight:700}
+.hours li.today span:first-child::after{content:"Today";margin-left:.6rem;background:var(--red);font-family:var(--display);letter-spacing:.1em;text-transform:uppercase;font-size:.85rem;padding:.12rem .55rem;border-radius:999px;vertical-align:middle}
+.hours li span:last-child{color:#c9d6f2}
+.hours li.today span:last-child{color:#fff}
+.cinfo{display:grid;gap:1rem}
+.cinfo div{display:flex;gap:.9rem;align-items:center}
+.cinfo .ico{flex:0 0 46px;height:46px;border-radius:12px;background:rgba(255,255,255,.1);display:grid;place-items:center}
+.cinfo b{display:block;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:#9fb1d6;font-weight:600}
+.cinfo a,.cinfo span{color:#fff;text-decoration:none;font-weight:600}
+.form-card{background:#fff;color:var(--ink);border-radius:16px;padding:2.6rem;box-shadow:0 40px 60px -40px rgba(0,0,0,.7);border-top:8px solid var(--red)}
+.form-card h3{font-size:2.2rem;text-transform:uppercase;margin-bottom:.3rem}
+.form-card>p{color:var(--muted);font-size:.96rem;margin-bottom:1.4rem}
+form{display:grid;gap:1rem}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+label{font-weight:700;font-size:.88rem;display:grid;gap:.35rem;color:var(--navy)}
+input,select,textarea{font:inherit;font-weight:400;padding:.8rem .9rem;border-radius:8px;border:2px solid var(--line);background:var(--mist);color:var(--ink);outline:none;transition:.2s;width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--blue);background:#fff;box-shadow:0 0 0 4px rgba(18,70,168,.15)}
+textarea{min-height:120px;resize:vertical}
+.hp{position:absolute;left:-9999px}
+form .btn{justify-self:start}
+.status{min-height:1.4em;font-size:.95rem;font-weight:600}
+.status.ok{color:#1f7a3a}.status.err{color:var(--red)}
+
+footer.site{background:#06163a;color:#9fb1d6;font-size:.92rem;padding:2rem 0}
+footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem}
+footer.site a{color:#fff}
+.mobile-call{display:none}
+
+/* CONCEPT BAR */
+.concept-bar {
+  /* Local settings – override per page if ever needed */
+  --concept-bg: #6feb3d;
+  --concept-ink: #0a1a08;
+  --concept-font: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 48px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 20px;
+  background: var(--concept-bg);
+  color: var(--concept-ink);
+  font-family: var(--concept-font);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  line-height: 1.3;
+  padding: 6px 20px;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.concept-bar *,
+.concept-bar *::before,
+.concept-bar *::after {
+  box-sizing: border-box;
+}
+
+/* Logo (left) */
+.concept-bar .concept-brand {
+  display: flex;
+  align-items: center;
+  justify-self: start;
+  width: 30px;
+}
+
+.concept-bar .concept-brand img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  background: transparent; /* stops host-page img backgrounds showing through */
+}
+
+/* Centre notice */
+.concept-bar .concept-notice {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
+/* Credit (right) */
+.concept-bar .concept-credit {
+  justify-self: end;
+  text-align: right;
+  text-transform: none;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+/* Links */
+.concept-bar a {
+  color: var(--concept-ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.concept-bar a.concept-brand {
+  text-decoration: none;
+}
+
+.concept-bar a:hover {
+  opacity: 0.85;
+}
+
+.concept-bar a:focus-visible {
+  outline: 2px solid var(--concept-ink);
+  outline-offset: 3px;
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .concept-bar {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+}
+
+/* reveal */
+.rv{transition:opacity .8s,transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .35s,border-color .3s}
+.rv:not(.in){opacity:0;transform:translateY(30px)}
+@media (prefers-reduced-motion:reduce){.rv:not(.in){opacity:1;transform:none}.rv{transition:none}html{scroll-behavior:auto}.badge-247 i::after{animation:none}}
+
+/* RESPONSIVE */
+@media (max-width:1050px){
+  section{padding:4.5rem 0}
+  .hero .wrap,.why-grid,.about-grid,.contact .wrap,.areas-in{grid-template-columns:1fr;gap:3.2rem}
+  .hero .wrap{padding:3.5rem 0 6rem}
+  .hero-vis{max-width:520px;width:100%;margin:0 auto}
+  .f1{left:2%}.f2{right:2%}
+  .cards,.price-grid,.quotes{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr);gap:2.6rem 1.4rem}
+  .trust .wrap{grid-template-columns:repeat(2,1fr)}
+  .stats .wrap{grid-template-columns:repeat(2,1fr);gap:2.4rem}
+  .why-vis{max-width:520px}
+}
+@media (max-width:860px){
+  .burger{display:block}
+  .tel span{display:none}
+  .links{position:fixed;inset:0 0 0 auto;width:min(84vw,340px);background:#fff;flex-direction:column;align-items:flex-start;justify-content:center;gap:1.6rem;padding:2.5rem;transform:translateX(100%);transition:.45s;box-shadow:-20px 0 50px -30px rgba(0,0,0,.5);z-index:120}
+  .links.open{transform:none}
+  .links a:not(.btn){font-size:1.15rem}
+  .bar{gap:.6rem}
+  .tel{margin-left:auto;margin-right:.8rem}
+}
+@media (max-width:680px){
+  .wrap{width:min(1180px,100% - 2rem)}
+  .cards,.price-grid,.quotes,.steps,.trust .wrap{grid-template-columns:1fr}
+  .row2{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr 1fr}
+  .grid figure,.grid figure:nth-child(n){grid-column:span 2;min-height:230px}
+  .form-card{padding:1.8rem 1.3rem}
+  .why-vis .stamp{right:2%;width:112px;height:112px;font-size:1.05rem}.why-vis .stamp b{font-size:2.2rem}
+  .logo small{display:none}
+  .concept-bar{justify-content:center;text-align:center;gap:8px 16px;padding:10px 16px}
+  .concept-notice,.concept-credit{flex:1 1 100%;text-align:center}
+  .mobile-call{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:90;background:var(--red);color:#fff;text-decoration:none;font-family:var(--display);font-weight:800;font-size:1.5rem;text-transform:uppercase;justify-content:center;align-items:center;gap:.6rem;padding:.7rem}
+  body{padding-bottom:3.4rem}
+}
+</style>
+</head>
+<body id="top">
+
+<!-- REQUIRED CONCEPT BAR -->
+<div class="concept-bar" id="conceptTop">
+  <a class="concept-brand" href="https://gorilla82.co.uk" target="_blank" rel="noopener" aria-label="Gorilla82 — websites for small businesses">
+    <img src="https://gorilla82.co.uk/images/Gorilla-banner.jpeg" alt="Gorilla82 — websites for small businesses">
+  </a>
+  <span class="concept-notice">Concept design only · Not a working website</span>
+  <span class="concept-credit">Designed by <a href="https://gorilla82.co.uk" target="_blank" rel="noopener">gorilla82.co.uk</a></span>
+</div>
+
+<header class="top" id="nav">
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="G82 Plumbing, back to top">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="31" fill="#1246a8"/><circle cx="32" cy="32" r="28" fill="none" stroke="#fff" stroke-width="2"/><rect x="6" y="39" width="52" height="7" fill="#d6282f"/><rect x="6" y="36" width="52" height="3" fill="#fff"/><text x="32" y="33" font-family="Barlow Condensed,Arial Narrow,Arial" font-weight="800" font-size="24" fill="#fff" text-anchor="middle">G82</text></svg>
+      <span>G82 Plumbing<small>Plumbing and heating, Gas Safe registered</small></span>
+    </a>
+    <a class="tel" href="tel:01234567890" aria-label="Call 01234 567 890"><svg class="ic" data-i="phone"></svg><span>01234 567 890</span></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+    <nav class="links" id="links" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#work">Our work</a>
+      <a href="#prices">Prices</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About us</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-red sm" href="#contact">Free quote</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <div class="badge-247"><i></i>Emergency callouts 24 hours a day</div>
+        <h1>Reliable plumbing, <em>certified excellence</em></h1>
+        <p>A local family business with years of experience. Whether it's a burst pipe at midnight or a whole new heating system, we'll sort it and leave your home tidy.</p>
+        <div class="actions">
+          <a class="btn btn-red" href="tel:01234567890">Call 01234 567 890</a>
+          <a class="btn btn-ghost" href="#contact">Get a free quote</a>
+        </div>
+        <div class="hero-checks">
+          <span><svg class="ic" data-i="check"></svg>Gas Safe registered</span>
+          <span><svg class="ic" data-i="check"></svg>Fixed, honest prices</span>
+          <span><svg class="ic" data-i="check"></svg>Tidy, respectful team</span>
+        </div>
+      </div>
+      <div class="hero-vis">
+        <div class="ph hero-img" data-img="hero" data-motif="0" data-label="Plumber at work"></div>
+        <div class="float f1"><div class="ico"><svg class="ic" data-i="shield"></svg></div><div><b>Gas Safe</b>Registered engineers</div></div>
+        <div class="float f2"><div class="ico"><svg class="ic" data-i="clock"></svg></div><div><b>Fast response</b>Typically within 2 hours</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRUST -->
+  <div class="trust">
+    <div class="wrap">
+      <div><span class="ico"><svg class="ic" data-i="shield"></svg></span><p style="margin:0">Gas Safe registered<span>Licence no. 000000</span></p></div>
+      <div><span class="ico r"><svg class="ic" data-i="clock"></svg></span><p style="margin:0">Emergency callouts<span>Fast response, day or night</span></p></div>
+      <div><span class="ico"><svg class="ic" data-i="star"></svg></span><p style="margin:0">Checkatrade member<span>Checked and reviewed</span></p></div>
+      <div><span class="ico"><svg class="ic" data-i="home"></svg></span><p style="margin:0">Family run<span>Honest advice, fixed prices</span></p></div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="center head rv">
+        <span class="kicker">What we do</span>
+        <h2>Everything that carries <em>water or heat</em></h2>
+        <p class="lede">One local team for every plumbing and heating job in your home, from a dripping tap to a brand-new system.</p>
+      </div>
+      <div class="cards">
+        <div class="card em rv"><div class="ico"><svg class="ic" data-i="zap"></svg></div><h3>Emergency callouts</h3><p>Leaks, burst pipes, no heating or hot water. We'll get to you quickly and make it safe first.</p><ul><li>24 hour response</li><li>Fully stocked vans</li><li>Most fixes in one visit</li></ul></div>
+        <div class="card rv"><div class="ico"><svg class="ic" data-i="flame"></svg></div><h3>Boiler installs, servicing &amp; repairs</h3><p>Gas Safe engineers for all major makes. Annual services and certificates for landlords too.</p><ul><li>All major brands</li><li>Landlord certificates</li><li>Manufacturer warranties</li></ul></div>
+        <div class="card rv"><div class="ico"><svg class="ic" data-i="radiator"></svg></div><h3>Heating system design &amp; install</h3><p>Radiators, underfloor heating and new systems planned around your home, your budget and how you live.</p><ul><li>Lower energy bills</li><li>Smart controls</li><li>Power flushing</li></ul></div>
+        <div class="card rv"><div class="ico"><svg class="ic" data-i="bath"></svg></div><h3>Bathrooms &amp; kitchens</h3><p>Full design, supply and fitting, or just the plumbing for your own project.</p><ul><li>Walk-in showers &amp; wetrooms</li><li>Single trusted team</li><li>Fixed-price quotes</li></ul></div>
+        <div class="card rv"><div class="ico"><svg class="ic" data-i="drop"></svg></div><h3>Leaks, taps, toilets &amp; drains</h3><p>The everyday jobs, fixed right the first time, with no mess left behind.</p><ul><li>Leak detection</li><li>Blocked drains &amp; toilets</li><li>Tap &amp; valve replacement</li></ul></div>
+        <div class="card rv"><div class="ico"><svg class="ic" data-i="wrench"></svg></div><h3>Maintenance &amp; landlord care</h3><p>Planned checks and fast repairs that keep rental properties and busy homes running smoothly.</p><ul><li>Gas safety certificates</li><li>Priority booking</li><li>Preventative checks</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMERGENCY -->
+  <div class="emergency">
+    <div class="wrap">
+      <div><h2>Burst pipe or no heating?</h2><p>Call now and speak to a real person, not a call centre.</p></div>
+      <a class="btn" href="tel:01234567890">01234 567 890</a>
+    </div>
+  </div>
+
+  <!-- WHY US -->
+  <section class="why alt" id="why">
+    <div class="wrap why-grid">
+      <div class="why-vis rv">
+        <div class="ph" data-img="why" data-motif="1" data-label="Quality workmanship"></div>
+        <div class="stamp"><div><b>100%</b>Satisfaction<br>guaranteed</div></div>
+      </div>
+      <div class="rv">
+        <span class="kicker">Why choose G82</span>
+        <h2>The plumbers you'd <em>recommend</em> to family</h2>
+        <p class="lede">Most of our work comes from people who've used us before or been recommended by a neighbour. That only happens when you do things properly.</p>
+        <div class="why-list">
+          <div class="why-item"><span class="ico"><svg class="ic" data-i="shield"></svg></span><div><h4>Qualified &amp; insured</h4><p>Gas Safe registered engineers with full public liability insurance.</p></div></div>
+          <div class="why-item"><span class="ico"><svg class="ic" data-i="tag"></svg></span><div><h4>Fixed, upfront prices</h4><p>You'll know the cost before we start, with no nasty surprises.</p></div></div>
+          <div class="why-item"><span class="ico"><svg class="ic" data-i="home"></svg></span><div><h4>Respect for your home</h4><p>Dust sheets, shoe covers and a thorough clean-up every time.</p></div></div>
+          <div class="why-item"><span class="ico"><svg class="ic" data-i="check"></svg></span><div><h4>Guaranteed work</h4><p>Every job is backed by our workmanship guarantee.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="wrap">
+      <div class="rv"><b>20<i>+</i></b><span>Years of hands-on experience</span></div>
+      <div class="rv"><b>6,000<i>+</i></b><span>Jobs completed</span></div>
+      <div class="rv"><b>2<i>hrs</i></b><span>Typical emergency response</span></div>
+      <div class="rv"><b>5<i>★</i></b><span>Average customer rating</span></div>
+    </div>
+  </div>
+
+  <!-- PROCESS -->
+  <section id="process" class="alt">
+    <div class="wrap">
+      <div class="center head rv">
+        <span class="kicker">How it works</span>
+        <h2>Simple from <em>start to finish</em></h2>
+      </div>
+      <div class="steps">
+        <div class="step rv"><h3>Get in touch</h3><p>Call us or send a quick enquiry. We'll reply the same working day.</p></div>
+        <div class="step rv"><h3>Free quote</h3><p>We assess the job and give you a clear, fixed price in writing.</p></div>
+        <div class="step rv"><h3>Expert fitting</h3><p>Our engineers get it done properly, on time and with minimal mess.</p></div>
+        <div class="step rv"><h3>Aftercare</h3><p>We test everything, tidy up and stand behind our work.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" class="work">
+    <div class="wrap">
+      <div class="work-head rv">
+        <div><span class="kicker">Our work</span><h2 style="margin:0">Recent <em>projects</em></h2></div>
+        <p class="lede" style="margin:0">A few of the bathrooms, kitchens and heating jobs we've finished lately. Tap any image to enlarge.</p>
+      </div>
+      <div class="grid rv">
+        <figure><div class="ph" data-img="work1" data-motif="2" data-label="Bathroom refit"></div><figcaption><small>Bathroom</small>Full bathroom refit with walk-in shower</figcaption></figure>
+        <figure><div class="ph" data-img="work2" data-motif="3" data-label="Kitchen plumbing"></div><figcaption><small>Kitchen</small>Kitchen sink and appliance plumbing</figcaption></figure>
+        <figure><div class="ph" data-img="work3" data-motif="0" data-label="Boiler install"></div><figcaption><small>Heating</small>Combi boiler replacement</figcaption></figure>
+        <figure><div class="ph" data-img="work4" data-motif="1" data-label="Taps &amp; basin"></div><figcaption><small>Bathroom</small>New basin and taps</figcaption></figure>
+        <figure><div class="ph" data-img="work5" data-motif="2" data-label="Heating upgrade"></div><figcaption><small>Heating</small>Whole-house heating upgrade</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICES -->
+  <section id="prices" class="alt">
+    <div class="wrap">
+      <div class="center head rv">
+        <span class="kicker">Price guide</span>
+        <h2>Honest, <em>upfront</em> pricing</h2>
+        <p class="lede">Every job is different, so these are guide prices to help you plan. You'll always get a fixed written quote before we start.</p>
+      </div>
+      <div class="price-grid">
+        <div class="pbox rv">
+          <div class="ph-head"><svg class="ic" data-i="drop"></svg><h3>Repairs &amp; call-outs</h3></div>
+          <div class="prow"><div class="n">Standard call-out &amp; diagnosis<small>Includes first 30 minutes</small></div><div class="p">£65</div></div>
+          <div class="prow"><div class="n">Hourly labour rate</div><div class="p">£55</div></div>
+          <div class="prow"><div class="n">Tap repair or replacement<small>Labour from</small></div><div class="p">£70</div></div>
+          <div class="prow"><div class="n">Toilet repair or replacement<small>Labour from</small></div><div class="p">£95</div></div>
+          <div class="prow"><div class="n">Leak finding &amp; repair<small>From</small></div><div class="p">£110</div></div>
+        </div>
+        <div class="pbox r rv">
+          <div class="ph-head"><svg class="ic" data-i="flame"></svg><h3>Boilers &amp; heating</h3></div>
+          <div class="prow"><div class="n">Boiler service &amp; safety check<small>Landlord certificates available</small></div><div class="p">£85</div></div>
+          <div class="prow"><div class="n">Boiler repair<small>From</small></div><div class="p">£120</div></div>
+          <div class="prow"><div class="n">Radiator replacement<small>Per radiator, from</small></div><div class="p">£150</div></div>
+          <div class="prow"><div class="n">Power flush<small>Whole system, from</small></div><div class="p">£350</div></div>
+          <div class="prow"><div class="n">Combi boiler supply &amp; fit<small>From</small></div><div class="p">£2,300</div></div>
+        </div>
+        <div class="pbox rv">
+          <div class="ph-head"><svg class="ic" data-i="bath"></svg><h3>Bathrooms &amp; kitchens</h3></div>
+          <div class="prow"><div class="n">Bathroom suite fitting<small>Plumbing labour, from</small></div><div class="p">£1,100</div></div>
+          <div class="prow"><div class="n">Full bathroom refit<small>Supply &amp; fit, from</small></div><div class="p">£4,500</div></div>
+          <div class="prow"><div class="n">Shower installation<small>From</small></div><div class="p">£450</div></div>
+          <div class="prow"><div class="n">Kitchen sink &amp; appliance plumbing<small>From</small></div><div class="p">£160</div></div>
+          <div class="prow"><div class="n">Free quote for larger projects</div><div class="p">£0</div></div>
+        </div>
+      </div>
+      <p class="pnote"><b>Emergency out-of-hours callouts</b> are charged at a higher rate, which we'll always confirm before travelling. Prices are a guide only and exclude parts and VAT where applicable.</p>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="reviews">
+    <div class="wrap">
+      <div class="rev-head rv">
+        <div><span class="kicker">Reviews</span><h2 style="margin:0">What our <em>customers</em> say</h2></div>
+        <a class="cc" href="https://www.checkatrade.com/trades/g82plumbing" target="_blank" rel="noopener">See all our reviews on Checkatrade (opens in a new tab)</a>
+      </div>
+      <div class="quotes">
+        <blockquote class="rv"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><p>Our boiler packed in on the coldest day of the year. They were here within two hours and we had heating again by teatime.</p><div class="who"><strong>Sarah M.</strong>, boiler repair</div></blockquote>
+        <blockquote class="rv"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><p>Fitted our new bathroom and it looks fantastic. Turned up when they said, kept the place clean and the price was exactly the quote.</p><div class="who"><strong>David and Helen R.</strong>, bathroom installation</div></blockquote>
+        <blockquote class="rv"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><p>Honest advice. They told us we didn't need a whole new system and saved us a lot of money. We'll use them again.</p><div class="who"><strong>Mr P. Okafor</strong>, central heating</div></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- AREAS + FAQ -->
+  <section class="alt" id="areas">
+    <div class="wrap areas-in">
+      <div class="rv">
+        <span class="kicker">Areas we cover</span>
+        <h2>Local to <em>you</em></h2>
+        <p class="lede">We look after homes across your town and the surrounding villages. Not sure if we cover you? Just ask.</p>
+      </div>
+      <div class="chips rv">
+        <span>Your Town</span><span>Northside</span><span>Eastfield</span><span>Westbrook</span><span>Millford</span><span>Oakley</span><span>Riverside</span><span>Hillcrest</span><span>Ashworth</span><span>+ surrounding villages</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="center head rv"><span class="kicker">FAQs</span><h2>Common <em>questions</em></h2></div>
+      <div class="faq rv">
+        <details><summary>How quickly can you get to an emergency?</summary><p>We aim to reach most emergency callouts within two hours, day or night. When you call, we'll give you a realistic arrival time and talk you through making things safe in the meantime.</p></details>
+        <details><summary>Are you Gas Safe registered?</summary><p>Yes. All gas work, including boiler installs, repairs and servicing, is carried out by Gas Safe registered engineers. You can ask to see our ID and licence number at any time.</p></details>
+        <details><summary>Do you offer free quotes?</summary><p>Absolutely. For larger jobs like bathrooms, boilers and heating systems we'll visit, assess and provide a clear fixed-price quote in writing, with no obligation.</p></details>
+        <details><summary>Do you guarantee your work?</summary><p>Yes. All workmanship is guaranteed, and new boilers and parts come with their manufacturer warranties. If anything isn't right, we'll come back and put it right.</p></details>
+        <details><summary>Can you supply the bathroom or kitchen fittings?</summary><p>We can design, supply and fit a complete project, or simply do the plumbing for fittings you've chosen yourself. Whatever suits your budget.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about alt">
+    <div class="wrap about-grid">
+      <div class="ph about-pic rv" data-img="about" data-motif="3" data-label="Family-run business"></div>
+      <div class="rv">
+        <span class="kicker">About us</span>
+        <h2>A family firm <em>you can trust</em></h2>
+        <p>G82 Plumbing is run by one family, and every job carries our name. We've spent years looking after homes in the area, so most of our work comes from people who've used us before or been recommended by a neighbour.</p>
+        <p>We're Gas Safe registered and cover all your plumbing and heating needs, from emergency callouts to designing and installing a full system that matches how you live.</p>
+        <div class="facts">
+          <div><b>Years</b><span>of hands-on experience</span></div>
+          <div><b>Gas Safe</b><span>registered engineers</span></div>
+          <div><b>Free</b><span>no-obligation quotes</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="rv">
+        <span class="kicker" style="color:#ff9da1">Get in touch</span>
+        <h2>Get a free <em style="color:#ff6a70">quote</em></h2>
+        <p>Tell us what you need and we'll get back to you the same working day. For emergencies, please call.</p>
+        <ul class="hours" id="hours">
+          <li data-d="1"><span>Monday</span><span>8am – 6pm</span></li>
+          <li data-d="2"><span>Tuesday</span><span>8am – 6pm</span></li>
+          <li data-d="3"><span>Wednesday</span><span>8am – 6pm</span></li>
+          <li data-d="4"><span>Thursday</span><span>8am – 6pm</span></li>
+          <li data-d="5"><span>Friday</span><span>8am – 6pm</span></li>
+          <li data-d="6"><span>Saturday</span><span>9am – 1pm</span></li>
+          <li data-d="0"><span>Sunday</span><span>Emergencies only</span></li>
+        </ul>
+        <div class="cinfo">
+          <div><span class="ico"><svg class="ic" data-i="phone"></svg></span><div><b>Phone (24 hour emergencies)</b><a href="tel:01234567890">01234 567 890</a></div></div>
+          <div><span class="ico"><svg class="ic" data-i="mail"></svg></span><div><b>Email</b><a href="mailto:hello@g82plumbing.example">hello@g82plumbing.example</a></div></div>
+          <div><span class="ico"><svg class="ic" data-i="pin"></svg></span><div><b>Areas we cover</b><span>Your town and surrounding villages</span></div></div>
+        </div>
+      </div>
+      <div class="rv" id="enquiry">
+        <div class="form-card">
+          <h3>Request a quote</h3>
+          <p>Fill in the form and we'll call you back. Emergency? Please phone us instead.</p>
+          <form id="form" novalidate>
+            <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="row2">
+              <label>Your name <input type="text" name="name" autocomplete="name" required></label>
+              <label>Phone number <input type="tel" name="phone" autocomplete="tel" required></label>
+            </div>
+            <label>Email (optional) <input type="email" name="email" autocomplete="email"></label>
+            <div class="row2">
+              <label>What do you need help with?
+                <select name="job">
+                  <option>Emergency callout</option>
+                  <option>Boiler install or repair</option>
+                  <option>Heating system design and install</option>
+                  <option>Bathroom or kitchen</option>
+                  <option>Leak, tap, toilet or drain</option>
+                  <option>Something else</option>
+                </select>
+              </label>
+              <label>How soon?
+                <select name="when"><option>As soon as possible</option><option>This week</option><option>In the next month</option><option>Just planning ahead</option></select>
+              </label>
+            </div>
+            <label>Tell us a bit more <textarea name="message"></textarea></label>
+            <button class="btn btn-red" type="submit" id="send">Send my request</button>
+            <div class="status" id="status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>&copy; <span id="yr">2026</span> G82 Plumbing. Gas Safe registered, licence no. ######.</span>
+    <span>All rights reserved · Privacy · Terms</span>
+  </div>
+</footer>
+
+<a class="mobile-call" href="tel:01234567890"><svg class="ic" data-i="phone" style="width:1.4rem;height:1.4rem"></svg> Call 01234 567 890</a>
+
+<!-- REQUIRED CONCEPT BAR -->
+<div class="concept-bar bottom">
+  <a class="concept-brand" href="https://gorilla82.co.uk" target="_blank" rel="noopener" aria-label="Gorilla82 — websites for small businesses">
+    <img src="https://gorilla82.co.uk/images/Gorilla-banner.jpeg" alt="Gorilla82 — websites for small businesses">
+  </a>
+  <span class="concept-notice">Concept design only · Not a working website</span>
+  <span class="concept-credit">Designed by <a href="https://gorilla82.co.uk" target="_blank" rel="noopener">gorilla82.co.uk</a></span>
+</div>
+
+<div class="lightbox" id="lb"><button aria-label="Close">×</button><img alt=""></div>
+
+<script>
+/* ===================== EASY SETTINGS — EDIT THESE ===================== */
+const CONFIG = {
+  formEndpoint: "",                          // optional Formspree URL e.g. "https://formspree.io/f/xxxxxxx"
+  fallbackEmail: "hello@g82plumbing.example"  // used if no formEndpoint is set (opens the visitor's email app)
+};
+
+/* All photos are free-to-use Unsplash images, listed by ID. Each slot lists backups: if the first
+   photo fails to load the next is tried, and if none load an illustrated tile is shown instead.
+   To use your own photos, put a full URL or a local path (e.g. "images/van.jpg") in the list. */
+const U = (v,w=1000) => /^(https?:|images\/|\.\/|\/)/.test(v) ? v : `https://images.unsplash.com/${v}?auto=format&fit=crop&w=${w}&q=75`;
+const IMAGES = {
+  hero:  ["photo-1621905251189-08b45d6a269e","photo-1504148455328-c376907d081c","photo-1607472586893-edb57bdc0e39"], // plumber fitting pipework
+  why:   ["photo-1585704032915-c3400ca199e7","photo-1581578731548-c64695cc6952"],                                       // pipes and tools / tradesperson
+  work1: ["photo-1620626011761-996317b8d101","photo-1552321554-5fefe8c9ef14"],                                           // bathroom with walk-in shower
+  work2: ["photo-1556911220-bff31c812dba","photo-1556909114-f6e7ad7d3136"],                                              // kitchen sink and tap
+  work3: ["photo-1607400201889-565b1ee75f8e","photo-1585704032915-c3400ca199e7"],                                        // boiler work
+  work4: ["photo-1584622781564-1d987f7333c1","photo-1584622650111-993a426fbf0a"],                                        // basin and taps
+  work5: ["photo-1600585154340-be6161a56a0c"],                                                                            // family home exterior
+  about: ["photo-1581578731548-c64695cc6952","photo-1504148455328-c376907d081c"]                                        // tradesperson at work
+};
+/* ====================================================================== */
+
+/* icons */
+const ICONS = {
+  phone:'<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/>',
+  mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
+  pin:'<path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="10" r="2.500"/>',
+  check:'<path d="M5 12l5 5L20 7"/>',
+  shield:'<path d="M12 2l8 3v6c0 5-3.500 9-8 11-4.500-2-8-6-8-11V5z"/><path d="M8.500 12l2.500 2.500L16 9.500"/>',
+  clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.500 2"/>',
+  star:'<polygon points="12 2 15 9 22 9.500 16.500 14 18.500 21 12 17 5.500 21 7.500 14 2 9.500 9 9 12 2"/>',
+  home:'<path d="M3 11l9-8 9 8v10H3z"/><path d="M9 21v-6h6v6"/>',
+  zap:'<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>',
+  flame:'<path d="M12 22c4 0 7-3 7-7 0-4-3-6-4-10-3 2-5 5-5 8-1-1-2-2-2-4-2 2-3 4-3 6 0 4 3 7 7 7z"/>',
+  radiator:'<rect x="3" y="6" width="18" height="12" rx="2"/><path d="M8 6v12M12 6v12M16 6v12M5 18v2M19 18v2"/>',
+  bath:'<path d="M3 12h18v3a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5z"/><path d="M6 12V6a2 2 0 0 1 4 0M7 20l-1 2M17 20l1 2"/>',
+  drop:'<path d="M12 2.700S5 10 5 14.500a7 7 0 0 0 14 0C19 10 12 2.700 12 2.700z"/>',
+  wrench:'<path d="M14.700 6.300a1 1 0 0 0 0 1.400l1.600 1.600a1 1 0 0 0 1.400 0l3.770-3.770a6 6 0 0 1-7.940 7.940l-6.910 6.910a2.120 2.120 0 0 1-3-3l6.910-6.910a6 6 0 0 1 7.940-7.940l-3.760 3.760z"/>',
+  tag:'<path d="M3 12V3h9l9 9-9 9z"/><circle cx="7.500" cy="7.500" r="1.500"/>'
+};
+document.querySelectorAll('svg[data-i]').forEach(s => { s.setAttribute('viewBox','0 0 24 24'); s.innerHTML = ICONS[s.dataset.i] || ''; });
+
+/* image slots with backups + illustrated fallbacks */
+const MOTIFS = [
+ '<svg viewBox="0 0 100 100" fill="none" stroke="#1246a8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 40h40v-16h14M50 40v36h16M64 24h26M66 76h24"/><circle cx="64" cy="24" r="6" fill="#fff"/><circle cx="66" cy="76" r="6" fill="#d6282f" stroke="#d6282f"/></svg>',
+ '<svg viewBox="0 0 100 100" fill="none" stroke="#1246a8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M50 8S20 44 20 62a30 30 0 0 0 60 0C80 44 50 8 50 8z" fill="#fff"/><path d="M36 64a14 14 0 0 0 14 14" stroke="#d6282f"/></svg>',
+ '<svg viewBox="0 0 100 100" fill="none" stroke="#1246a8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="26" width="72" height="48" rx="6" fill="#fff"/><path d="M30 26v48M46 26v48M62 26v48M78 26v48" stroke="#d6282f"/></svg>',
+ '<svg viewBox="0 0 100 100" fill="none" stroke="#1246a8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M62 14a22 22 0 0 0 24 30L50 80a10 10 0 0 1-14-14L72 30a22 22 0 0 1-10-16z" fill="#fff"/><circle cx="42" cy="73" r="3" fill="#d6282f" stroke="#d6282f"/></svg>'
+];
+function imgFail(box){
+  if (!box || box.classList.contains('noimg')) return;
+  const m = +box.dataset.motif || 0, label = box.dataset.label || '';
+  const im = box.querySelector('img'); if (im) im.remove();
+  box.classList.add('noimg');
+  box.insertAdjacentHTML('beforeend', MOTIFS[m % MOTIFS.length] + (label ? '<span>'+label+'</span>' : ''));
+}
+function loadSlot(box, list, i, w){
+  if (i >= list.length) return imgFail(box);
+  const im = new Image(); im.alt = (box.dataset.label || '').replace(/&amp;/g,'&'); im.loading = 'eager';
+  im.onload = () => { const old = box.querySelector('img'); if (old) old.remove(); box.appendChild(im); };
+  im.onerror = () => loadSlot(box, list, i + 1, w);
+  im.src = U(list[i], w);
+}
+document.querySelectorAll('.ph[data-img]').forEach(box => {
+  const list = IMAGES[box.dataset.img]; if (!list) return;
+  loadSlot(box, list, 0, box.dataset.img === 'hero' ? 1000 : 900);
+});
+
+/* Lightbox for projects */
+const lb = document.getElementById('lb'), lbImg = lb.querySelector('img');
+document.querySelectorAll('.grid figure').forEach(f => f.addEventListener('click', () => {
+  const im = f.querySelector('img'); if (!im) return;
+  lbImg.src = im.src.replace(/w=\d+/, 'w=1600'); lbImg.alt = im.alt; lb.classList.add('open');
+}));
+lb.addEventListener('click', () => lb.classList.remove('open'));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('open'); });
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* Header sits below the concept bar until it scrolls out of view */
+const nav = document.getElementById('nav'), cbar = document.getElementById('conceptTop');
+function placeNav(){ nav.style.top = Math.max(0, cbar.offsetHeight - window.scrollY) + 'px'; nav.classList.toggle('solid', window.scrollY > 40); }
+placeNav(); window.addEventListener('scroll', placeNav, {passive:true}); window.addEventListener('resize', placeNav);
+const hero = document.querySelector('.hero'); const setHeroPad = () => hero.style.paddingTop = (document.querySelector('header.top').offsetHeight) + 'px'; setHeroPad(); window.addEventListener('resize', setHeroPad);
+const burger = document.getElementById('burger'), links = document.getElementById('links');
+function closeMenu(){ links.classList.remove('open'); burger.classList.remove('open'); burger.setAttribute('aria-expanded','false'); }
+burger.addEventListener('click', () => { const o = links.classList.toggle('open'); burger.classList.toggle('open', o); burger.setAttribute('aria-expanded', o); });
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+/* Today's hours */
+const li = document.querySelector('#hours li[data-d="' + new Date().getDay() + '"]'); if (li) li.classList.add('today');
+
+/* Reveal */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.1});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+/* Quote form */
+const form = document.getElementById('form'), st = document.getElementById('status'), sb = document.getElementById('send');
+form.addEventListener('submit', async e => {
+  e.preventDefault(); st.className = 'status';
+  const d = Object.fromEntries(new FormData(form));
+  if (d._gotcha) return;
+  if (!d.name.trim() || !d.phone.trim()){ st.textContent = 'Please add your name and phone number so we can call you back.'; st.classList.add('err'); return; }
+  if (d.email && !/^\S+@\S+\.\S+$/.test(d.email)){ st.textContent = 'That email address doesn\u2019t look right.'; st.classList.add('err'); return; }
+  if (CONFIG.formEndpoint){
+    sb.disabled = true; sb.textContent = 'Sending…';
+    try{
+      const r = await fetch(CONFIG.formEndpoint, {method:'POST', headers:{'Accept':'application/json','Content-Type':'application/json'}, body:JSON.stringify(d)});
+      if (!r.ok) throw 0;
+      form.reset(); st.textContent = 'Thanks! We\u2019ll be in touch the same working day.'; st.classList.add('ok');
+    }catch(_){ st.textContent = 'Sorry, that didn\u2019t send. Please call 01234 567 890 or email ' + CONFIG.fallbackEmail + '.'; st.classList.add('err'); }
+    sb.disabled = false; sb.textContent = 'Send my request';
+  } else {
+    const body = 'Name: '+d.name+'\nPhone: '+d.phone+'\nEmail: '+(d.email||'-')+'\nJob: '+d.job+'\nTimescale: '+d.when+'\n\n'+(d.message||'');
+    location.href = 'mailto:'+CONFIG.fallbackEmail+'?subject='+encodeURIComponent('Quote request – '+d.job)+'&body='+encodeURIComponent(body);
+    st.textContent = 'Opening your email app…'; st.classList.add('ok');
+  }
+});
+</script>
+</body>
+</html>

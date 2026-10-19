@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>G82 Salon | Luxury Hair &amp; Beauty Studio</title>
+<meta name="description" content="G82 Salon is a high-end hair and beauty studio offering bespoke colour, cutting, styling, beauty and aesthetic treatments with elite professional service.">
+<meta name="theme-color" content="#0d0d0d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d0d0d; --ink-2:#161616; --ink-3:#1f1f1f;
+  --ivory:#f6f1ea; --stone:#e9e1d5; --muted:#8c8579;
+  --gold:#b89b6a; --gold-2:#d4bb8e;
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --sans:'Jost','Helvetica Neue',Arial,sans-serif;
+  --max:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:var(--sans);font-weight:300;background:var(--ivory);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+section{padding:120px 0}
+.eyebrow{font-size:.72rem;letter-spacing:.38em;text-transform:uppercase;color:var(--gold);font-weight:400;display:block;margin-bottom:18px}
+h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.1}
+h2{font-size:clamp(2.2rem,4.5vw,3.6rem);margin-bottom:22px}
+h2 em,h1 em{font-style:italic;color:var(--gold)}
+.lead{max-width:560px;color:#55504a}
+.center{text-align:center}.center .lead{margin:0 auto}
+.btn{display:inline-block;padding:16px 38px;font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;font-weight:400;border:1px solid var(--gold);color:var(--ivory);background:transparent;cursor:pointer;transition:.35s;font-family:var(--sans)}
+.btn:hover{background:var(--gold);color:var(--ink)}
+.btn.solid{background:var(--gold);color:var(--ink)}
+.btn.solid:hover{background:var(--gold-2);border-color:var(--gold-2)}
+.btn.dark{color:var(--ink)}
+.btn.dark:hover{color:var(--ink)}
+
+/* image slots: gradient fallback shows if a photo fails to load */
+.img{position:relative;overflow:hidden;background:linear-gradient(135deg,#2a2622,#4a4136 55%,#2a2622)}
+.img img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.img:hover img{transform:scale(1.05)}
+
+/* NAV */
+nav{position:fixed;inset:0 0 auto 0;z-index:100;transition:.4s;padding:26px 0}
+nav.solid{background:rgba(13,13,13,.94);backdrop-filter:blur(10px);padding:16px 0;border-bottom:1px solid rgba(184,155,106,.18)}
+.nav-in{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--serif);font-size:1.9rem;letter-spacing:.14em;color:var(--ivory);font-weight:400}
+.logo span{color:var(--gold)}
+.links{display:flex;gap:34px;align-items:center;list-style:none}
+.links a{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ivory);opacity:.85;transition:.3s}
+.links a:hover{color:var(--gold-2);opacity:1}
+.links .btn{padding:11px 24px;color:var(--ivory)}
+.links .btn:hover{color:var(--ink)}
+.burger{display:none;background:none;border:0;cursor:pointer;width:32px;height:22px;position:relative}
+.burger i{position:absolute;left:0;width:100%;height:1px;background:var(--ivory);transition:.3s}
+.burger i:nth-child(1){top:2px}.burger i:nth-child(2){top:10px}.burger i:nth-child(3){top:18px}
+.burger.open i:nth-child(1){top:10px;transform:rotate(45deg)}
+.burger.open i:nth-child(2){opacity:0}
+.burger.open i:nth-child(3){top:10px;transform:rotate(-45deg)}
+
+/* HERO */
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;position:relative;color:var(--ivory);padding:140px 0 100px;background:var(--ink)}
+.hero .bg{position:absolute;inset:0}
+.hero .bg img{width:100%;height:100%;object-fit:cover;opacity:.55}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,13,13,.9) 0%,rgba(13,13,13,.55) 55%,rgba(13,13,13,.3) 100%)}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{font-size:clamp(3rem,8vw,6.6rem);max-width:820px;margin-bottom:28px}
+.hero p{max-width:480px;font-size:1.05rem;opacity:.85;margin-bottom:44px}
+.hero .cta{display:flex;gap:18px;flex-wrap:wrap}
+.scroll{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:2;font-size:.64rem;letter-spacing:.35em;text-transform:uppercase;color:var(--ivory);opacity:.6;text-align:center}
+.scroll::after{content:"";display:block;width:1px;height:46px;background:var(--gold);margin:12px auto 0}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
+.about .img{aspect-ratio:4/5}
+.about .img.small{position:absolute;width:48%;aspect-ratio:1;right:-8%;bottom:-8%;border:10px solid var(--ivory)}
+.about .visual{position:relative}
+.stats{display:flex;gap:46px;margin-top:44px;padding-top:34px;border-top:1px solid var(--stone)}
+.stats b{display:block;font-family:var(--serif);font-size:2.8rem;font-weight:300;color:var(--gold);line-height:1}
+.stats span{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.about p+p{margin-top:18px}
+
+/* SERVICES */
+.services{background:var(--ink);color:var(--ivory)}
+.services .lead{color:#b9b2a6}
+.tabs{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:56px 0 54px}
+.tab{background:none;border:1px solid transparent;color:var(--ivory);font-family:var(--sans);font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;padding:12px 22px;cursor:pointer;transition:.3s;opacity:.7;font-weight:300}
+.tab:hover{opacity:1}
+.tab.active{border-color:var(--gold);color:var(--gold-2);opacity:1}
+.panel{display:none;grid-template-columns:1fr 1.2fr;gap:70px;align-items:center}
+.panel.active{display:grid;animation:fade .7s}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.panel .img{aspect-ratio:4/5}
+.menu li{list-style:none;display:flex;gap:16px;align-items:baseline;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.menu h3{font-size:1.55rem;font-weight:400;white-space:nowrap}
+.menu .dots{flex:1;border-bottom:1px dotted rgba(184,155,106,.4);transform:translateY(-5px);min-width:20px}
+.menu .price{font-family:var(--serif);font-size:1.4rem;color:var(--gold-2);white-space:nowrap}
+.menu small{display:block;font-size:.85rem;color:#a39c90;margin-top:2px;letter-spacing:.02em}
+.menu .row{flex:1}
+.menu .top{display:flex;gap:16px;align-items:baseline}
+.note{margin-top:44px;font-size:.82rem;color:#8c8579;text-align:center;letter-spacing:.04em}
+
+/* STUDIO */
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:150px;gap:16px;margin-top:64px}
+.gallery .img:nth-child(1){grid-column:span 5;grid-row:span 4}
+.gallery .img:nth-child(2){grid-column:span 4;grid-row:span 2}
+.gallery .img:nth-child(3){grid-column:span 3;grid-row:span 3}
+.gallery .img:nth-child(4){grid-column:span 4;grid-row:span 2}
+.gallery .img:nth-child(5){grid-column:span 3;grid-row:span 1}
+.gallery .img:nth-child(6){grid-column:span 7;grid-row:span 2}
+.gallery .img:nth-child(7){grid-column:span 5;grid-row:span 2}
+.amenities{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:80px;text-align:center}
+.amenities div{padding:28px 10px;border-top:1px solid var(--gold)}
+.amenities h3{font-size:1.4rem;font-weight:400;margin-bottom:6px}
+.amenities p{font-size:.88rem;color:#6b665e}
+
+/* TEAM */
+.team{background:var(--stone)}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:64px}
+.card .img{aspect-ratio:3/4;margin-bottom:22px}
+.card .img .mono{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--serif);font-size:4rem;color:rgba(255,255,255,.25)}
+.card .img img{position:relative;z-index:1;filter:grayscale(.25)}
+.card h3{font-size:1.7rem;font-weight:400}
+.card .role{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);display:block;margin:2px 0 10px}
+.card p{font-size:.9rem;color:#5c574f}
+
+/* REVIEWS */
+.reviews{background:var(--ink);color:var(--ivory);text-align:center}
+.slider{max-width:820px;margin:60px auto 0;position:relative;min-height:290px}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .9s;pointer-events:none}
+.slide.active{opacity:1;position:relative;pointer-events:auto}
+.stars{color:var(--gold);letter-spacing:.35em;font-size:1rem;margin-bottom:28px}
+.slide blockquote{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.4}
+.slide cite{display:block;margin-top:30px;font-style:normal;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-2)}
+.dotsnav{display:flex;gap:12px;justify-content:center;margin-top:46px}
+.dotsnav button{width:9px;height:9px;border-radius:50%;border:1px solid var(--gold);background:none;cursor:pointer;padding:0;transition:.3s}
+.dotsnav button.active{background:var(--gold)}
+.rating{margin-top:60px;padding-top:40px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:center;gap:60px;flex-wrap:wrap}
+.rating b{font-family:var(--serif);font-size:2.6rem;font-weight:300;color:var(--gold-2);display:block;line-height:1.1}
+.rating span{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:#a39c90}
+
+/* BOOKING BAND */
+.book{position:relative;color:var(--ivory);text-align:center;padding:140px 0;background:var(--ink-2)}
+.book .bg{position:absolute;inset:0}
+.book .bg img{width:100%;height:100%;object-fit:cover;opacity:.35}
+.book .bg::after{content:"";position:absolute;inset:0;background:rgba(13,13,13,.6)}
+.book .wrap{position:relative;z-index:2}
+.book h2{margin-bottom:18px}
+.book p{max-width:520px;margin:0 auto 40px;opacity:.85}
+
+/* HOURS + CONTACT */
+.visit{display:grid;grid-template-columns:1fr 1.15fr;gap:90px}
+.hours{margin-top:34px;list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:15px 0;border-bottom:1px solid var(--stone);font-size:.98rem}
+.hours li.today{color:var(--gold);font-weight:400}
+.hours li.today span:first-child::after{content:"  · Today";font-size:.68rem;letter-spacing:.2em;text-transform:uppercase}
+.hours .closed{color:var(--muted)}
+.contact-lines{margin-top:36px;display:grid;gap:14px;font-size:.98rem}
+.contact-lines b{display:block;font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:400}
+form{display:grid;gap:22px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+label{font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px}
+input,select,textarea{width:100%;background:transparent;border:0;border-bottom:1px solid #c9bfae;padding:10px 0;font:inherit;font-weight:300;color:var(--ink);border-radius:0;outline:none;transition:.3s}
+input:focus,select:focus,textarea:focus{border-color:var(--gold)}
+textarea{resize:vertical;min-height:110px}
+.form-card{background:#fff;padding:52px;box-shadow:0 30px 80px -40px rgba(0,0,0,.25)}
+.form-card h3{font-size:2rem;font-weight:400;margin-bottom:6px}
+.form-card>p{font-size:.92rem;color:#6b665e;margin-bottom:28px}
+.hp{position:absolute;left:-9999px}
+.status{font-size:.9rem;min-height:1.4em}
+.status.ok{color:#4f7a52}.status.err{color:#a4473d}
+.map{margin-top:36px;aspect-ratio:16/9;border:0;width:100%;filter:grayscale(1) contrast(1.05);opacity:.9}
+
+/* FOOTER */
+footer{background:var(--ink);color:#a39c90;padding:80px 0 36px;text-align:center}
+footer .logo{display:block;margin-bottom:12px;font-size:2.4rem}
+footer .tag{font-family:var(--serif);font-style:italic;font-size:1.2rem;margin-bottom:34px}
+.social{display:flex;gap:30px;justify-content:center;margin-bottom:44px;flex-wrap:wrap}
+.social a{font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--ivory);transition:.3s}
+.social a:hover{color:var(--gold-2)}
+.copy{font-size:.72rem;letter-spacing:.1em;padding-top:30px;border-top:1px solid rgba(255,255,255,.08)}
+
+
+/* CONCEPT BAR */
+/* ==========================================================
+   Gorilla82 Concept Bar – shared stylesheet
+   Link from every concept page:
+   <link rel="stylesheet" href="/css/concept-bar.css">
+   Self-contained: does not rely on any variables or resets
+   from the host page.
+   ========================================================== */
+
+/* Optional: load the font the bar uses (remove if the page already loads DM Sans) */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap");
+
+.concept-bar {
+  /* Local settings – override per page if ever needed */
+  --concept-bg: #6feb3d;
+  --concept-ink: #0a1a08;
+  --concept-font: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 48px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 20px;
+  background: var(--concept-bg);
+  color: var(--concept-ink);
+  font-family: var(--concept-font);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  line-height: 1.3;
+  padding: 6px 20px;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.concept-bar *,
+.concept-bar *::before,
+.concept-bar *::after {
+  box-sizing: border-box;
+}
+
+/* Logo (left) */
+.concept-bar .concept-brand {
+  display: flex;
+  align-items: center;
+  justify-self: start;
+  width: 30px;
+}
+
+.concept-bar .concept-brand img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  background: transparent; /* stops host-page img backgrounds showing through */
+}
+
+/* Centre notice */
+.concept-bar .concept-notice {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
+/* Credit (right) */
+.concept-bar .concept-credit {
+  justify-self: end;
+  text-align: right;
+  text-transform: none;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+/* Links */
+.concept-bar a {
+  color: var(--concept-ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.concept-bar a.concept-brand {
+  text-decoration: none;
+}
+
+.concept-bar a:hover {
+  opacity: 0.85;
+}
+
+.concept-bar a:focus-visible {
+  outline: 2px solid var(--concept-ink);
+  outline-offset: 3px;
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .concept-bar {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+}
+
+
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);transition:opacity 1s,transform 1s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* RESPONSIVE */
+@media (max-width:1000px){
+  section{padding:90px 0}
+  .about,.visit,.panel.active{grid-template-columns:1fr;gap:56px}
+  .about .img.small{right:4%}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .amenities{grid-template-columns:repeat(2,1fr)}
+  .gallery{grid-auto-rows:110px}
+}
+@media (max-width:820px){
+  .burger{display:block}
+  nav.solid{backdrop-filter:none;background:var(--ink)}
+  .links{position:fixed;inset:0 0 0 auto;width:min(82vw,340px);background:var(--ink);flex-direction:column;justify-content:center;gap:30px;transform:translateX(100%);transition:.45s;padding:40px}
+  .links.open{transform:none}
+  .links a{font-size:.82rem}
+  .burger{z-index:110}
+}
+@media (max-width:600px){
+  .wrap{padding:0 22px}
+  .row2{grid-template-columns:1fr}
+  .form-card{padding:34px 24px}
+  .stats{gap:28px;flex-wrap:wrap}
+  .cards{grid-template-columns:1fr 1fr;gap:18px}
+  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}
+  .gallery .img:nth-child(n){grid-column:span 1;grid-row:span 1}
+  .gallery .img:nth-child(1),.gallery .img:nth-child(6){grid-column:span 2}
+  .menu h3{white-space:normal;font-size:1.3rem}
+  .menu .dots{display:none}
+  .menu .top{justify-content:space-between}
+  .about .img.small{display:none}
+}
+</style>
+</head>
+<body>
+
+  <!-- REQUIRED CONCEPT BAR -->
+  <div class="concept-bar" id="conceptTop">
+    <a class="concept-brand" href="https://gorilla82.co.uk" target="_blank" rel="noopener" aria-label="Gorilla82 — websites for small businesses">
+      <img src="https://gorilla82.co.uk/images/Gorilla-banner.jpeg" alt="Gorilla82 — websites for small businesses">
+    </a>
+    <span class="concept-notice">Concept design only · Not a working website</span>
+    <span class="concept-credit">Designed by <a href="https://gorilla82.co.uk" target="_blank" rel="noopener">gorilla82.co.uk</a></span>
+  </div>
+
+
+<!-- ============ NAVIGATION ============ -->
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="logo">G82<span>.</span></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+    <ul class="links" id="links">
+      <li><a href="#about">The Studio</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li><a href="#enquiry">Contact</a></li>
+      <li><a class="btn book-link" href="#" target="_blank" rel="noopener">Book Now</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="bg"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=2000&q=80" alt="" onerror="this.remove()"></div>
+  <div class="wrap">
+    <span class="eyebrow">Hair &amp; Beauty Studio</span>
+    <h1>The art of <em>looking</em> and feeling extraordinary</h1>
+    <p>A private, luxury studio where expert artistry meets uncompromising service. Every visit is tailored entirely to you.</p>
+    <div class="cta">
+      <a class="btn solid book-link" href="#" target="_blank" rel="noopener">Book via Booksy</a>
+      <a class="btn" href="#services">Explore Services</a>
+    </div>
+  </div>
+  <div class="scroll">Scroll</div>
+</header>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap about">
+    <div class="visual rv">
+      <div class="img"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=80" alt="Stylist finishing a client's hair" loading="lazy" onerror="this.remove()"></div>
+      <div class="img small"><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=600&q=80" alt="Hair colour detail" loading="lazy" onerror="this.remove()"></div>
+    </div>
+    <div class="rv">
+      <span class="eyebrow">Welcome to G82</span>
+      <h2>Where craft meets <em>calm</em></h2>
+      <p class="lead">G82 Salon is a high-end studio built around one idea: that exceptional results begin with exceptional care.</p>
+      <p class="lead">From your first consultation to the final finish, our award-calibre team delivers precision, discretion and a level of service that makes every appointment feel effortless. Premium products, considered detail, and time that is entirely yours.</p>
+      <div class="stats">
+        <div><b>15+</b><span>Years of artistry</span></div>
+        <div><b>5★</b><span>Client rated</span></div>
+        <div><b>1:1</b><span>Personal service</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">Our Services</span>
+      <h2>A menu of <em>refined</em> treatments</h2>
+      <p class="lead">Every service begins with a thorough consultation, so the result is designed specifically for you.</p>
+    </div>
+
+    <div class="tabs rv" role="tablist">
+      <button class="tab active" data-t="hair" role="tab">Hair</button>
+      <button class="tab" data-t="colour" role="tab">Colour</button>
+      <button class="tab" data-t="beauty" role="tab">Beauty</button>
+      <button class="tab" data-t="bridal" role="tab">Occasion</button>
+    </div>
+
+    <div class="panel active" id="hair">
+      <div class="img"><img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=900&q=80" alt="Hair styling" loading="lazy" onerror="this.remove()"></div>
+      <ul class="menu">
+        <li><div class="row"><div class="top"><h3>Signature Cut &amp; Finish</h3><span class="dots"></span><span class="price">from £75</span></div><small>Consultation, restorative wash, precision cut and styled finish</small></div></li>
+        <li><div class="row"><div class="top"><h3>Blow Dry &amp; Style</h3><span class="dots"></span><span class="price">from £45</span></div><small>Smooth, volume or waves — expertly finished</small></div></li>
+        <li><div class="row"><div class="top"><h3>Gentlemen's Cut</h3><span class="dots"></span><span class="price">from £45</span></div><small>Tailored cut with a hot-towel finish</small></div></li>
+        <li><div class="row"><div class="top"><h3>Keratin Smoothing</h3><span class="dots"></span><span class="price">from £180</span></div><small>Frizz-free, glossy results lasting up to 4 months</small></div></li>
+        <li><div class="row"><div class="top"><h3>Luxury Hair Treatments</h3><span class="dots"></span><span class="price">from £55</span></div><small>Deep repair rituals with scalp massage</small></div></li>
+      </ul>
+    </div>
+
+    <div class="panel" id="colour">
+      <div class="img"><img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=900&q=80" alt="Hair colouring" loading="lazy" onerror="this.remove()"></div>
+      <ul class="menu">
+        <li><div class="row"><div class="top"><h3>Full Head Colour</h3><span class="dots"></span><span class="price">from £95</span></div><small>Rich, long-lasting colour with a gloss finish</small></div></li>
+        <li><div class="row"><div class="top"><h3>Balayage &amp; Hand-painted</h3><span class="dots"></span><span class="price">from £220</span></div><small>Soft, sun-kissed dimension, bespoke to you</small></div></li>
+        <li><div class="row"><div class="top"><h3>Blonde Specialist</h3><span class="dots"></span><span class="price">from £250</span></div><small>Lightening and toning with bond protection</small></div></li>
+        <li><div class="row"><div class="top"><h3>Root Tint</h3><span class="dots"></span><span class="price">from £65</span></div><small>Seamless regrowth coverage</small></div></li>
+        <li><div class="row"><div class="top"><h3>Gloss &amp; Tone</h3><span class="dots"></span><span class="price">from £50</span></div><small>Instant shine and colour refresh</small></div></li>
+      </ul>
+    </div>
+
+    <div class="panel" id="beauty">
+      <div class="img"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=900&q=80" alt="Beauty treatment" loading="lazy" onerror="this.remove()"></div>
+      <ul class="menu">
+        <li><div class="row"><div class="top"><h3>Signature Facial</h3><span class="dots"></span><span class="price">from £85</span></div><small>Deep cleanse, exfoliation, massage and mask</small></div></li>
+        <li><div class="row"><div class="top"><h3>Lash Lift &amp; Tint</h3><span class="dots"></span><span class="price">from £55</span></div><small>Defined, lifted lashes without extensions</small></div></li>
+        <li><div class="row"><div class="top"><h3>Brow Sculpt &amp; Tint</h3><span class="dots"></span><span class="price">from £35</span></div><small>Shaped to frame your features</small></div></li>
+        <li><div class="row"><div class="top"><h3>Luxury Manicure</h3><span class="dots"></span><span class="price">from £40</span></div><small>Gel or classic polish, with hand ritual</small></div></li>
+        <li><div class="row"><div class="top"><h3>Luxury Pedicure</h3><span class="dots"></span><span class="price">from £50</span></div><small>Soothing soak, exfoliation and polish</small></div></li>
+      </ul>
+    </div>
+
+    <div class="panel" id="bridal">
+      <div class="img"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80" alt="Bridal styling" loading="lazy" onerror="this.remove()"></div>
+      <ul class="menu">
+        <li><div class="row"><div class="top"><h3>Bridal Hair</h3><span class="dots"></span><span class="price">from £150</span></div><small>Includes trial and personal consultation</small></div></li>
+        <li><div class="row"><div class="top"><h3>Bridal Make-up</h3><span class="dots"></span><span class="price">from £120</span></div><small>Flawless, photograph-ready finish</small></div></li>
+        <li><div class="row"><div class="top"><h3>Occasion Styling</h3><span class="dots"></span><span class="price">from £65</span></div><small>Up-styles, curls and event-ready glamour</small></div></li>
+        <li><div class="row"><div class="top"><h3>Bridal Party Packages</h3><span class="dots"></span><span class="price">Enquire</span></div><small>Private studio hire for your wedding morning</small></div></li>
+      </ul>
+    </div>
+
+    <p class="note">Prices shown are guide prices. A personal quote is given at your consultation.</p>
+    <div class="center" style="margin-top:44px"><a class="btn solid book-link" href="#" target="_blank" rel="noopener">Book a Service</a></div>
+  </div>
+</section>
+
+<!-- ============ STUDIO ============ -->
+<section id="studio">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">The Studio</span>
+      <h2>An <em>exquisite</em> space</h2>
+      <p class="lead">Designed for comfort, privacy and indulgence — a studio that feels as good as the results look.</p>
+    </div>
+    <div class="gallery rv">
+      <div class="img"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=80" alt="Salon interior" loading="lazy" onerror="this.remove()"></div>
+      <div class="img"><img src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=800&q=80" alt="Styling stations" loading="lazy" onerror="this.remove()"></div>
+      <div class="img"><img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=700&q=80" alt="Salon detail" loading="lazy" onerror="this.remove()"></div>
+      <div class="img"><img src="https://images.unsplash.com/photo-1470259078422-826894b933aa?auto=format&fit=crop&w=800&q=80" alt="Wash area" loading="lazy" onerror="this.remove()"></div>
+      <div class="img"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=600&q=80" alt="Nail treatment" loading="lazy" onerror="this.remove()"></div>
+      <div class="img"><img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=1200&q=80" alt="Premium products" loading="lazy" onerror="this.remove()"></div>
+      <div class="img"><img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=1000&q=80" alt="Client styling" loading="lazy" onerror="this.remove()"></div>
+    </div>
+    <div class="amenities rv">
+      <div><h3>Private Suites</h3><p>Discreet treatment areas for total relaxation</p></div>
+      <div><h3>Premium Products</h3><p>Only the world's finest professional brands</p></div>
+      <div><h3>Refreshments</h3><p>Complimentary champagne, tea and coffee</p></div>
+      <div><h3>Step-free Access</h3><p>A welcoming space for every client</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEAM ============ -->
+<section class="team" id="team">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">The Team</span>
+      <h2>Meet your <em>artists</em></h2>
+      <p class="lead">Highly trained, endlessly passionate and devoted to making you look and feel your best.</p>
+    </div>
+    <div class="cards">
+      <article class="card rv">
+        <div class="img"><span class="mono">A</span><img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=700&q=80" alt="Alexandra, Creative Director" loading="lazy" onerror="this.remove()"></div>
+        <h3>Alexandra</h3><span class="role">Founder &amp; Creative Director</span>
+        <p>Cutting and colour specialist with over 15 years in luxury salons.</p>
+      </article>
+      <article class="card rv">
+        <div class="img"><span class="mono">J</span><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="James, Senior Stylist" loading="lazy" onerror="this.remove()"></div>
+        <h3>James</h3><span class="role">Senior Stylist</span>
+        <p>Precision cutting, men's grooming and creative restyles.</p>
+      </article>
+      <article class="card rv">
+        <div class="img"><span class="mono">S</span><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=700&q=80" alt="Sophia, Colour Specialist" loading="lazy" onerror="this.remove()"></div>
+        <h3>Sophia</h3><span class="role">Colour Specialist</span>
+        <p>Balayage, blonding and bespoke colour correction.</p>
+      </article>
+      <article class="card rv">
+        <div class="img"><span class="mono">E</span><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=700&q=80" alt="Emily, Beauty Therapist" loading="lazy" onerror="this.remove()"></div>
+        <h3>Emily</h3><span class="role">Beauty Therapist</span>
+        <p>Advanced facials, lashes, brows and nail artistry.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Client Reviews</span>
+      <h2>Words from our <em>guests</em></h2>
+    </div>
+    <div class="slider" id="slider">
+      <div class="slide active"><div class="stars">★★★★★</div><blockquote>“The most luxurious salon experience I have ever had. My colour is flawless and the attention to detail is simply unmatched.”</blockquote><cite>Charlotte H. — Balayage</cite></div>
+      <div class="slide"><div class="stars">★★★★★</div><blockquote>“From the moment you walk in you are looked after. Elegant, calm and the results speak for themselves.”</blockquote><cite>Olivia M. — Cut &amp; Finish</cite></div>
+      <div class="slide"><div class="stars">★★★★★</div><blockquote>“Impeccable service and a stunning studio. G82 did my wedding hair and I could not have been happier.”</blockquote><cite>Hannah R. — Bridal Hair</cite></div>
+      <div class="slide"><div class="stars">★★★★★</div><blockquote>“Best cut I've had in years. Professional, friendly and genuinely listens to what you want.”</blockquote><cite>Daniel W. — Gentlemen's Cut</cite></div>
+    </div>
+    <div class="dotsnav" id="dots"></div>
+    <div class="rating">
+      <div><b>5.0</b><span>Average rating</span></div>
+      <div><b>500+</b><span>Five-star reviews</span></div>
+      <div><b>98%</b><span>Return clients</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOOKING BAND ============ -->
+<section class="book" id="book">
+  <div class="bg"><img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=2000&q=80" alt="" loading="lazy" onerror="this.remove()"></div>
+  <div class="wrap rv">
+    <span class="eyebrow">Reservations</span>
+    <h2>Your appointment <em>awaits</em></h2>
+    <p>Book online in moments through Booksy — choose your service, your artist and the time that suits you, 24 hours a day.</p>
+    <a class="btn solid book-link" href="#" target="_blank" rel="noopener">Book Online with Booksy</a>
+  </div>
+</section>
+
+<!-- ============ VISIT + ENQUIRY ============ -->
+<section id="visit">
+  <div class="wrap visit">
+    <div class="rv">
+      <span class="eyebrow">Visit Us</span>
+      <h2>Opening <em>times</em></h2>
+      <ul class="hours" id="hours">
+        <li data-d="1"><span>Monday</span><span class="closed">Closed</span></li>
+        <li data-d="2"><span>Tuesday</span><span>9:30 – 18:00</span></li>
+        <li data-d="3"><span>Wednesday</span><span>9:30 – 20:00</span></li>
+        <li data-d="4"><span>Thursday</span><span>9:30 – 20:00</span></li>
+        <li data-d="5"><span>Friday</span><span>9:00 – 18:30</span></li>
+        <li data-d="6"><span>Saturday</span><span>8:30 – 17:00</span></li>
+        <li data-d="0"><span>Sunday</span><span class="closed">Closed</span></li>
+      </ul>
+      <div class="contact-lines">
+        <div><b>Address</b>82 Example Street, Your Town, AB1 2CD</div>
+        <div><b>Telephone</b><a href="tel:+440000000000">+44 (0)000 000 0000</a></div>
+        <div><b>Email</b><a href="mailto:hello@g82salon.co.uk">hello@g82salon.co.uk</a></div>
+      </div>
+    </div>
+
+    <div class="rv" id="enquiry">
+      <div class="form-card">
+        <h3>Enquiries &amp; Feedback</h3>
+        <p>Questions, special requests or thoughts on your visit? We would love to hear from you.</p>
+        <form id="form" novalidate>
+          <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="row2">
+            <div><label for="name">Full name</label><input id="name" name="name" type="text" required autocomplete="name"></div>
+            <div><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+          </div>
+          <div class="row2">
+            <div><label for="phone">Phone (optional)</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+            <div><label for="type">Regarding</label>
+              <select id="type" name="type">
+                <option>General enquiry</option>
+                <option>Booking help</option>
+                <option>Bridal / events</option>
+                <option>Feedback on my visit</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div><label for="msg">Your message</label><textarea id="msg" name="message" required></textarea></div>
+          <button type="submit" class="btn solid" id="send">Send Message</button>
+          <div class="status" id="status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <a href="#top" class="logo">G82<span>.</span> SALON</a>
+    <div class="tag">Luxury hair &amp; beauty</div>
+    <div class="social">
+      <a href="#" target="_blank" rel="noopener">Instagram</a>
+      <a href="#" target="_blank" rel="noopener">Facebook</a>
+      <a href="#" target="_blank" rel="noopener">TikTok</a>
+      <a class="book-link" href="#" target="_blank" rel="noopener">Booksy</a>
+    </div>
+    <div class="copy">© <span id="yr"></span> G82 Salon. All rights reserved.</div>
+  </div>
+</footer>
+
+  <!-- REQUIRED CONCEPT BAR -->
+  <div class="concept-bar bottom">
+    <a class="concept-brand" href="https://gorilla82.co.uk" target="_blank" rel="noopener" aria-label="Gorilla82 — websites for small businesses">
+      <img src="https://gorilla82.co.uk/images/Gorilla-banner.jpeg" alt="Gorilla82 — websites for small businesses">
+    </a>
+    <span class="concept-notice">Concept design only · Not a working website</span>
+    <span class="concept-credit">Designed by <a href="https://gorilla82.co.uk" target="_blank" rel="noopener">gorilla82.co.uk</a></span>
+  </div>
+
+
+<script>
+/* ===================== EASY SETTINGS — EDIT THESE ===================== */
+const CONFIG = {
+  booksyUrl: "https://booksy.com/",          // <- paste your Booksy business page link
+  formEndpoint: "",                          // <- optional: Formspree URL e.g. "https://formspree.io/f/xxxxxxx"
+  fallbackEmail: "hello@g82salon.co.uk"      // used if no formEndpoint is set (opens the visitor's email app)
+};
+/* ====================================================================== */
+
+// Booksy links
+document.querySelectorAll('.book-link').forEach(a => a.href = CONFIG.booksyUrl);
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// Sticky nav + mobile menu
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('solid', window.scrollY > 60);
+onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+// Keep the fixed nav sitting beneath the concept bar until it scrolls out of view
+const cbar = document.getElementById('conceptTop');
+function placeNav(){ nav.style.top = Math.max(0, cbar.offsetHeight - window.scrollY) + 'px'; }
+placeNav(); window.addEventListener('scroll', placeNav, {passive:true}); window.addEventListener('resize', placeNav);
+const burger = document.getElementById('burger'), links = document.getElementById('links');
+function closeMenu(){ links.classList.remove('open'); burger.classList.remove('open'); burger.setAttribute('aria-expanded','false'); }
+burger.addEventListener('click', () => {
+  const o = links.classList.toggle('open');
+  burger.classList.toggle('open', o);
+  burger.setAttribute('aria-expanded', o);
+});
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+// Service tabs
+document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
+  document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(x => x.classList.remove('active'));
+  t.classList.add('active');
+  document.getElementById(t.dataset.t).classList.add('active');
+}));
+
+// Reviews slider
+const slides = [...document.querySelectorAll('.slide')], dotsEl = document.getElementById('dots');
+let cur = 0, timer;
+slides.forEach((_, i) => {
+  const b = document.createElement('button');
+  b.setAttribute('aria-label', 'Review ' + (i + 1));
+  b.addEventListener('click', () => { show(i); restart(); });
+  dotsEl.appendChild(b);
+});
+function show(i){
+  cur = i;
+  slides.forEach((s, k) => s.classList.toggle('active', k === i));
+  [...dotsEl.children].forEach((d, k) => d.classList.toggle('active', k === i));
+}
+function restart(){ clearInterval(timer); timer = setInterval(() => show((cur + 1) % slides.length), 6500); }
+show(0); restart();
+
+// Highlight today's opening hours
+const today = new Date().getDay();
+const li = document.querySelector('#hours li[data-d="' + today + '"]');
+if (li) li.classList.add('today');
+
+// Scroll reveal
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+}), {threshold:.12});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+// Enquiry form
+const form = document.getElementById('form'), statusEl = document.getElementById('status'), sendBtn = document.getElementById('send');
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  statusEl.className = 'status';
+  const d = Object.fromEntries(new FormData(form));
+  if (d._gotcha) return;
+  if (!d.name.trim() || !/^\S+@\S+\.\S+$/.test(d.email) || !d.message.trim()){
+    statusEl.textContent = 'Please complete your name, a valid email and your message.';
+    statusEl.classList.add('err'); return;
+  }
+  if (CONFIG.formEndpoint){
+    sendBtn.disabled = true; sendBtn.textContent = 'Sending…';
+    try{
+      const r = await fetch(CONFIG.formEndpoint, {method:'POST', headers:{'Accept':'application/json','Content-Type':'application/json'}, body:JSON.stringify(d)});
+      if (!r.ok) throw 0;
+      form.reset();
+      statusEl.textContent = 'Thank you — your message has been sent. We will be in touch shortly.';
+      statusEl.classList.add('ok');
+    }catch(_){
+      statusEl.textContent = 'Sorry, something went wrong. Please email us directly at ' + CONFIG.fallbackEmail + '.';
+      statusEl.classList.add('err');
+    }
+    sendBtn.disabled = false; sendBtn.textContent = 'Send Message';
+  } else {
+    const body = 'Name: ' + d.name + '\nEmail: ' + d.email + '\nPhone: ' + (d.phone || '-') + '\n\n' + d.message;
+    location.href = 'mailto:' + CONFIG.fallbackEmail + '?subject=' + encodeURIComponent('G82 Salon – ' + d.type) + '&body=' + encodeURIComponent(body);
+    statusEl.textContent = 'Opening your email app to send your message…';
+    statusEl.classList.add('ok');
+  }
+});
+</script>
+</body>
+</html>

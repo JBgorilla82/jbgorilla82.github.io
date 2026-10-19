@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>G82 Electrician | Electrical services in Bournemouth &amp; Dorset</title>
+  <meta name="description" content="Concept design for G82 Electrician — friendly, professional electrical services, project examples and a space for verified Checkatrade feedback. Designed by gorilla82.co.uk">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest: #242a2d;
+      --deep: #171b1e;
+      --leaf: #ffd166;
+      --leaf-bright: #ffd166;
+      --paper: #f7f4ed;
+      --muted: #5e6668;
+      --line: #dedbd3;
+      --ink: #202528;
+      --white: #fffdf8;
+      --star: #e8b923;
+      --neon: #6feb3d;
+      --neon-dim: #d89e19;
+
+      --sans: "DM Sans", system-ui, sans-serif;
+      --display: "Manrope", system-ui, sans-serif;
+
+      --max: 1120px;
+      --header-h: 76px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; height: auto; object-fit: cover; }
+    img { color: var(--muted); background: #e4e8df; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.15; letter-spacing: -0.03em; }
+    :focus-visible { outline: 3px solid var(--leaf); outline-offset: 3px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+    }
+
+    /* ========== CONCEPT BARS (required on all templates) ========== */
+    .concept-bar {
+      min-height: 48px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 20px;
+      background: var(--neon);
+      color: #0a1a08;
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.025em;
+      padding: 6px 20px;
+      line-height: 1.3;
+    }
+    .concept-brand {
+      display: flex;
+      align-items: center;
+      justify-self: start;
+      width: 30px;
+    }
+    .concept-brand img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+    .concept-notice {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+    }
+    .concept-credit {
+      justify-self: end;
+      text-align: right;
+      text-transform: none;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+    .concept-bar a {
+      color: #0a1a08;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .concept-bar a:hover { opacity: 0.85; }
+
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
+
+    /* ========== HEADER ========== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+    }
+    .header-inner {
+      height: var(--header-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border: 1.5px solid var(--forest);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-family: Georgia, serif;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--forest);
+    }
+    .brand-text b {
+      display: block;
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+    }
+    .brand-text small {
+      display: block;
+      font-size: 9px;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.14em;
+      margin-top: 3px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .nav-links a:not(.btn):hover { color: var(--forest); }
+
+    .btn {
+      display: inline-block;
+      background: var(--forest);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 13px 18px;
+      border: 1px solid var(--forest);
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn:hover { background: var(--deep); }
+    .btn.light {
+      background: var(--leaf-bright);
+      color: var(--deep);
+      border-color: var(--leaf-bright);
+    }
+    .btn.light:hover { background: var(--leaf); }
+    .btn.ghost {
+      background: transparent;
+      color: var(--forest);
+    }
+    .btn.ghost:hover {
+      background: var(--forest);
+      color: var(--white);
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      background: var(--deep);
+      color: var(--white);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 48px;
+      align-items: center;
+      padding: 72px 0 78px;
+    }
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--leaf);
+    }
+    .eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: currentColor;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    .hero h1 {
+      font-weight: 500;
+      font-size: clamp(40px, 5.4vw, 64px);
+      letter-spacing: -0.055em;
+      margin: 22px 0 18px;
+      color: var(--white);
+    }
+    .hero h1 em {
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--leaf);
+    }
+    .hero-lede {
+      max-width: 440px;
+      color: #d1d9d0;
+      font-size: 15.5px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      margin-top: 28px;
+    }
+    .hero-actions .plain {
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      border-top: 1px solid #3a5143;
+      padding-top: 20px;
+      margin-top: 32px;
+      color: #c5d0c7;
+      font-size: 10px;
+    }
+    .hero-stats strong {
+      display: block;
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .hero-visual {
+      position: relative;
+    }
+    .hero-visual img {
+      width: 100%;
+      height: 440px;
+      border-radius: 2px;
+    }
+    .hero-label {
+      position: absolute;
+      bottom: 18px;
+      left: -18px;
+      background: var(--paper);
+      color: var(--deep);
+      padding: 14px 18px;
+      max-width: 240px;
+    }
+    .hero-label small {
+      display: block;
+      font-size: 9px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .hero-label strong {
+      font-family: Georgia, serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.25;
+    }
+
+    /* ========== INTRO ========== */
+    .intro {
+      padding: 78px 0;
+    }
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 0.5fr 1.5fr;
+      gap: 50px;
+    }
+    .tag {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #93610b;
+    }
+    .intro h2 {
+      font-weight: 500;
+      font-size: clamp(28px, 3.8vw, 44px);
+      letter-spacing: -0.04em;
+      margin: 0 0 18px;
+    }
+    .intro h2 em {
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      color: #93610b;
+    }
+    .intro-copy {
+      max-width: 720px;
+      font-size: 16px;
+      color: #536055;
+    }
+    .intro-copy p + p { margin-top: 14px; }
+
+    /* ========== SERVICES ========== */
+    .services {
+      background: #eeebe3;
+      padding: 78px 0;
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
+      margin-bottom: 36px;
+    }
+    .section-head h2 {
+      font-weight: 500;
+      font-size: clamp(28px, 3.8vw, 44px);
+      letter-spacing: -0.04em;
+      margin: 8px 0 0;
+    }
+    .section-head h2 em {
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      color: #93610b;
+    }
+    .section-head p {
+      max-width: 320px;
+      color: var(--muted);
+      font-size: 13px;
+      margin: 0;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid #dfe4d9;
+      padding: 24px 22px;
+      min-height: 180px;
+    }
+    .card small {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      color: #93610b;
+      font-weight: 700;
+    }
+    .card h3 {
+      font-size: 18px;
+      margin: 20px 0 10px;
+    }
+    .card p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* ========== WORK ========== */
+    .work {
+      padding: 78px 0;
+      background: var(--paper);
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 14px;
+    }
+    .project {
+      position: relative;
+      min-height: 240px;
+      overflow: hidden;
+      background: #dce3d5;
+    }
+    .project.big { grid-row: span 2; }
+    .project img {
+      width: 100%;
+      height: 100%;
+      min-height: 240px;
+      transition: transform 0.35s ease;
+      background: #dce3d5;
+    }
+    .project.big img { min-height: 510px; }
+    .project:hover img { transform: scale(1.03); }
+    .caption {
+      position: absolute;
+      bottom: 13px;
+      left: 13px;
+      right: 13px;
+      background: rgba(255, 254, 250, 0.94);
+      padding: 12px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .caption small {
+      display: block;
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .caption b {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    /* ========== REVIEWS ========== */
+    .reviews {
+      background: var(--forest);
+      color: white;
+      padding: 64px 0;
+    }
+    .reviews-inner {
+      display: grid;
+      grid-template-columns: 0.55fr 1.45fr;
+      gap: 42px;
+      align-items: start;
+    }
+    .reviews-score {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 48px;
+      letter-spacing: -0.05em;
+    }
+    .reviews-score small {
+      display: block;
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 600;
+      color: #c6d3c7;
+      letter-spacing: 0.04em;
+      margin-top: 6px;
+    }
+    .stars {
+      color: var(--leaf-bright);
+      letter-spacing: 0.12em;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .review-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .review-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 20px;
+    }
+    .review-card p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+    .review-card footer {
+      font-size: 11px;
+      color: #c7e1b5;
+      letter-spacing: 0.04em;
+    }
+    .review-card footer strong {
+      display: block;
+      color: white;
+      font-size: 13px;
+      margin-bottom: 2px;
+    }
+
+    /* ========== WHY / PROCESS ========== */
+    .process {
+      padding: 78px 0;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 36px;
+    }
+    .step {
+      border-top: 1px solid #cbd4c7;
+      padding-top: 18px;
+    }
+    .step small {
+      color: #93610b;
+      letter-spacing: 0.14em;
+      font-size: 10px;
+      font-weight: 700;
+    }
+    .step h3 {
+      font-size: 17px;
+      margin: 12px 0 8px;
+    }
+    .step p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* ========== CONTACT CTA ========== */
+    .cta {
+      background: var(--leaf-bright);
+      padding: 68px 0;
+    }
+    .cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 36px;
+    }
+    .cta h2 {
+      font-weight: 500;
+      font-size: clamp(26px, 3.5vw, 40px);
+      color: #193b2a;
+      letter-spacing: -0.04em;
+      margin: 8px 0 12px;
+    }
+    .cta p {
+      max-width: 520px;
+      color: #435c45;
+      font-size: 14px;
+    }
+    .cta-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-end;
+    }
+    .cta-phone {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--deep);
+    }
+    .cta-phone:hover { color: var(--forest); }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      background: var(--deep);
+      color: #eaf0e7;
+      padding: 28px 0;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .footer-inner p,
+    .footer-inner a {
+      font-size: 11px;
+      color: #c0cec0;
+    }
+    .footer-links a { margin-left: 16px; }
+    .footer-links a:hover { color: var(--leaf); }
+
+    /* ========== MOBILE ========== */
+    @media (max-width: 900px) {
+      .nav-links a:not(.btn) { display: none; }
+      .hero-grid { grid-template-columns: 1fr; padding: 48px 0 56px; gap: 36px; }
+      .hero-visual img { height: 340px; }
+      .hero-label { left: 12px; }
+      .intro-grid { grid-template-columns: 1fr; gap: 20px; }
+      .section-head { flex-direction: column; align-items: flex-start; }
+      .cards { grid-template-columns: repeat(2, 1fr); }
+      .gallery { grid-template-columns: 1fr 1fr; }
+      .project.big { grid-row: auto; }
+      .project.big img { min-height: 280px; }
+      .reviews-inner { grid-template-columns: 1fr; gap: 28px; }
+      .review-grid { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr 1fr; }
+      .cta-inner { flex-direction: column; align-items: flex-start; }
+      .cta-actions { align-items: flex-start; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: calc(100% - 28px); }
+      .brand-text b { font-size: 11px; }
+      .brand-text small { font-size: 8px; }
+      .header-inner { height: 66px; }
+      .nav-links .btn { padding: 10px 12px; font-size: 11px; }
+      .hero h1 { font-size: 38px; }
+      .cards, .gallery, .steps { grid-template-columns: 1fr; }
+      .project img, .project.big img { height: 260px; min-height: 260px; }
+      .concept-bar { font-size: 10px; padding: 6px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- REQUIRED CONCEPT BAR – TOP -->
+  <div class="concept-bar">
+    <a class="concept-brand" href="https://gorilla82.co.uk" target="_blank" rel="noopener" aria-label="Gorilla82 — websites for small businesses">
+      <img src="../../images/Gorilla-banner.jpeg" alt="Gorilla82 — websites for small businesses">
+    </a>
+    <span class="concept-notice">Concept design only · Not a working website</span>
+    <span class="concept-credit">Designed by <a href="https://gorilla82.co.uk" target="_blank" rel="noopener">gorilla82.co.uk</a></span>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="#home" class="brand" aria-label="G82 Electrician home">
+        <span class="brand-mark" aria-hidden="true">G82</span>
+        <span class="brand-text">
+          <b>G82 ELECTRICIAN</b>
+          <small>ELECTRICAL · LIGHTING · SAFETY</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#services">Services</a>
+        <a href="#work">Our work</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact" class="btn">Discuss your job ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Local electricians · Bournemouth &amp; beyond</div>
+          <h1>Powering your home.<br><em>Safely and reliably</em></h1>
+          <p class="hero-lede">Professional, friendly electrical services for homes and small businesses across Dorset. From lighting upgrades to additional sockets and fault finding, expect clear advice, careful work and a tidy finish.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn light">Discuss your project ↗</a>
+            <a href="#contact" class="plain">Request a free quote ↓</a>
+          </div>
+          <div class="hero-stats">
+            <div><strong>Customer first</strong>Clear, friendly advice</div>
+            <div><strong>Safety led</strong>Careful, considered work</div>
+            <div><strong>Local service</strong>Bournemouth &amp; surrounding</div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=85" alt="Electrician inspecting a domestic electrical installation with tools ready for the job" width="1200" height="900" fetchpriority="high" decoding="async">
+          <div class="hero-label">
+            <small>Electrical work, made clear</small>
+            <strong>Straight answers. Careful work. A tidy finish.</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro" id="about">
+      <div class="wrap intro-grid">
+        <div class="tag">01 / Local &amp; accountable</div>
+        <div>
+          <h2>Electrical work,<br><em>for the way you live</em></h2>
+          <div class="intro-copy">
+            <p>Whether you need an urgent repair, a new boiler, or a complete bathroom, the right tradesperson makes the difference. G82 Electrician focuses on clear communication, tidy work and honest pricing.</p>
+            <p>This concept brings services, project examples and a dedicated space for verified customer feedback together, helping visitors understand the work and feel confident about making an enquiry.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="tag">02 / What we do</div>
+            <h2>From small fixes<br>to <em>planned upgrades</em></h2>
+          </div>
+          <p>From a single fitting to larger improvement work, find the right service and get in touch to discuss what your property needs.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <small>SERVICE / 01</small>
+            <h3>Fault finding &amp; repairs</h3>
+            <p>Diagnosing electrical faults, resolving common issues and making repairs with safety and care in mind.</p>
+          </article>
+          <article class="card">
+            <small>SERVICE / 02</small>
+            <h3>Lighting installation</h3>
+            <p>Ceiling lights, downlights, exterior lighting and practical upgrades that make every room work better.</p>
+          </article>
+          <article class="card">
+            <small>SERVICE / 03</small>
+            <h3>Sockets &amp; switches</h3>
+            <p>Additional sockets, replacement switches and USB socket upgrades for everyday convenience.</p>
+          </article>
+          <article class="card">
+            <small>SERVICE / 04</small>
+            <h3>Consumer units</h3>
+            <p>Consumer unit upgrades and electrical improvements, with suitability assessed for your property.</p>
+          </article>
+          <article class="card">
+            <small>SERVICE / 05</small>
+            <h3>Rewires &amp; upgrades</h3>
+            <p>Electrical work for renovations, extensions and property improvements, planned around the wider project.</p>
+          </article>
+          <article class="card">
+            <small>SERVICE / 06</small>
+            <h3>Electrical safety</h3>
+            <p>Electrical checks and safety-focused advice to help you understand the condition of your installation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="work" id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="tag">03 / Selected work</div>
+            <h2>Good work. <em>Clearly shown</em></h2>
+          </div>
+          <p>Use real project photography here to show workmanship, finish quality and the kinds of electrical jobs you want more of.</p>
+        </div>
+        <div class="gallery">
+          <article class="project big">
+            <img src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1000&q=85" alt="Warm contemporary kitchen lighting installation" width="1000" height="1200" loading="lazy" decoding="async">
+            <div class="caption">
+              <div><small>Lighting</small><b>Kitchen downlights</b></div>
+              <span>↗</span>
+            </div>
+          </article>
+          <article class="project">
+            <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=700&q=85" alt="Installation engineer working on a wall-mounted domestic boiler and pipework" width="700" height="500" loading="lazy" decoding="async">
+            <div class="caption">
+              <div><small>Installation</small><b>Consumer unit upgrade</b></div>
+              <span>↗</span>
+            </div>
+          </article>
+          <article class="project">
+            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=700&q=85" alt="Installation installer fitting a white radiator and connecting the pipework" width="700" height="500" loading="lazy" decoding="async">
+            <div class="caption">
+              <div><small>Installation</small><b>Exterior lighting</b></div>
+              <span>↗</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews" id="reviews">
+      <div class="wrap reviews-inner">
+        <div>
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <div class="reviews-score">
+            Checkatrade
+            <small>Verified feedback · Checkatrade</small>
+          </div>
+        </div>
+        <div class="review-grid">
+          <article class="review-card">
+            <p>“Add a short, verbatim review from the G82 Electrician Checkatrade profile here.”</p>
+            <footer>
+              <strong>Verified customer review</strong>
+              Replace with reviewer details as published
+            </footer>
+          </article>
+          <article class="review-card">
+            <p>“Choose feedback that speaks to punctuality, clear communication and the quality of the finished work.”</p>
+            <footer>
+              <strong>Verified customer review</strong>
+              Use the original wording and attribution
+            </footer>
+          </article>
+          <article class="review-card">
+            <p>“A third genuine review can highlight a specific service, such as lighting, fault finding or an installation.”</p>
+            <footer>
+              <strong>Verified customer review</strong>
+              Add the relevant job type
+            </footer>
+          </article>
+          <article class="review-card">
+            <p>These are layout examples, not published customer testimonials. Replace them with real Checkatrade feedback before launch.</p>
+            <footer>
+              <strong>Demo content</strong>
+              No rating or review count has been assumed
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="tag">04 / How it works</div>
+            <h2>From first enquiry<br>to <em>finished safely</em></h2>
+          </div>
+          <p>A straightforward process helps customers know what happens next, before any work begins.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <small>STEP 01</small>
+            <h3>Tell us what you need</h3>
+            <p>Share a short description of the job, your property and preferred timing.</p>
+          </article>
+          <article class="step">
+            <small>STEP 02</small>
+            <h3>Get clear advice</h3>
+            <p>We’ll talk through the likely work, practical options and next steps.</p>
+          </article>
+          <article class="step">
+            <small>STEP 03</small>
+            <h3>Work carefully</h3>
+            <p>Agree the scope, then complete the work with care and respect for your home.</p>
+          </article>
+          <article class="step">
+            <small>STEP 04</small>
+            <h3>Review the experience</h3>
+            <p>After the job, customers can share their experience through the appropriate review platform.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contact">
+      <div class="wrap cta-inner">
+        <div>
+          <div class="tag">05 / Start a conversation</div>
+          <h2>Need an electrician in the G82 area?</h2>
+          <p>Tell us about your electrical job and the property location. Get in touch to discuss availability, the work involved and a clear next step across Bournemouth and surrounding Dorset.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="mailto:hello@g82electrician.example?subject=Electrical%20enquiry" class="cta-phone">Email G82 Electrician</a>
+          <a href="mailto:hello@g82electrician.example?subject=Electrical%20enquiry" class="btn">Discuss your job ↗</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© 2026 G82 Electrician · Concept design only</p>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#work">Our work</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- REQUIRED CONCEPT BAR – BOTTOM -->
+  <div class="concept-bar">
+    <a class="concept-brand" href="https://gorilla82.co.uk" target="_blank" rel="noopener" aria-label="Gorilla82 — websites for small businesses">
+      <img src="../../images/Gorilla-banner.jpeg" alt="Gorilla82 — websites for small businesses">
+    </a>
+    <span class="concept-notice">Concept design only · Not a working website</span>
+    <span class="concept-credit">Designed by <a href="https://gorilla82.co.uk" target="_blank" rel="noopener">gorilla82.co.uk</a></span>
+  </div>
+
+</body>
+</html>
