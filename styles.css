@@ -681,6 +681,10 @@ h1 em-neon,h2 em-neon {
   font-size:28px
 }
 
+.arrows {
+  font-size:inherit
+}
+
 .intro-stat p {
   font-size:11px;
   line-height:1.7;
@@ -2458,7 +2462,7 @@ h1,h2,h3,.brand-mark,.button,.nav-cta {
 }
 
 @supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
-  .stat-mark {
+  .arrows {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
 }
