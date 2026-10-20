@@ -2457,3 +2457,8 @@ h1,h2,h3,.brand-mark,.button,.nav-cta {
   font-family:var(--display)
 }
 
+@supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
+  .stat-mark {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
