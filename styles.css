@@ -215,6 +215,13 @@ button,input,textarea,select {
   display:inline-block
 }
 
+.eyebrow-line-dark {
+  width:24px;
+  height:1px;
+  background:var(--ink);
+  display:inline-block
+}
+
 h1,h2,h3,p {
   margin-top:0
 }
