@@ -346,6 +346,11 @@ footer .hand{font-family:var(--hand);font-size:1.7rem;color:var(--blush);margin-
   .concept-bar{justify-content:center;text-align:center;gap:8px 16px;padding:10px 16px}
   .concept-notice,.concept-credit{flex:1 1 100%;text-align:center}
 }
+@supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
+  .arrows {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
 </style>
 </head>
 <body>
@@ -388,7 +393,7 @@ footer .hand{font-family:var(--hand);font-size:1.7rem;color:var(--blush);margin-
       </span></h1>
       <p>Three exceptional tattoo artists, one dedicated piercer and a bright, welcoming studio. Whether it's your first piece or your fortieth, we'll make it brilliant and make you feel at home</p>
       <div class="cta">
-        <a class="btn red book-link" href="#" target="_blank" rel="noopener">Book Now →</a>
+        <a class="btn red book-link arrows" href="#" target="_blank" rel="noopener">Book Now →</a>
         <a class="btn" href="#gallery">See the work</a>
       </div>
       <div class="meta">
@@ -556,7 +561,7 @@ footer .hand{font-family:var(--hand);font-size:1.7rem;color:var(--blush);margin-
     <span class="tag" style="color:#fff">ready when you are</span>
     <h2>Let's make <em>something</em> beautiful</h2>
     <p>Pick your artist, choose a time and pay your deposit in a few taps through Booksy. Easy</p>
-    <a class="btn book-link" href="#" target="_blank" rel="noopener">Book Now →</a>
+    <a class="btn book-link arrows" href="#" target="_blank" rel="noopener">Book Now →</a>
   </div>
 </section>
 

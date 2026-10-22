@@ -640,6 +640,11 @@
       .steps, form { grid-template-columns: 1fr; }
       .concept-bar { font-size: 10px; padding: 6px 12px; }
     }
+    @supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
+      .arrows {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+    }
   </style>
 </head>
 <body>
@@ -667,7 +672,7 @@
         <a href="#about">About</a>
         <a href="#work">Portfolio</a>
         <a href="#reviews">Reviews</a>
-        <a href="#contact" class="btn">Enquire Now ↗</a>
+        <a href="#contact" class="btn arrows">Enquire Now ↗</a>
       </nav>
     </div>
   </header>
@@ -683,7 +688,7 @@
           <p class="hero-lede">Bespoke wedding and celebration cakes, handcrafted in Poole &amp; Bournemouth</p>
           <p class="hero-body">Every cake begins with a conversation about your event, palette, and flavours. We turn your vision into a stunning centerpiece that tastes as exceptional as it looks</p>
           <div class="hero-actions">
-            <a href="#contact" class="btn">Enquire Now ↗</a>
+            <a href="#contact" class="btn arrows">Enquire Now ↗</a>
             <a href="#collections" class="btn light">Explore Collections</a>
           </div>
           <div class="hero-stats">
@@ -736,7 +741,7 @@
             <small>COLLECTION / 01</small>
             <h3>The Simplicity Line</h3>
             <p>Clean lines, soft organic textures, and fresh floral accents. Elegant cakes that let the beauty of the occasion speak for itself</p>
-            <a href="#contact" class="btn light">Enquire Now ↗</a>
+            <a href="#contact" class="btn light arrows">Enquire Now ↗</a>
           </article>
 
           <article class="card">
@@ -748,7 +753,7 @@
             <small>COLLECTION / 02</small>
             <h3>The Luxury Tier</h3>
             <p>Sculpted tiers, hand-finished gold leaf details, and delicate sugar craft designed as an unforgettable wedding centerpiece</p>
-            <a href="#contact" class="btn light">Enquire Now ↗</a>
+            <a href="#contact" class="btn light arrows">Enquire Now ↗</a>
           </article>
 
           <article class="card">
@@ -760,7 +765,7 @@
             <small>COLLECTION / 03</small>
             <h3>The Dessert Bar</h3>
             <p>Coordinated sweet treats, mini cakes, and favor bites baked with the same care and premium ingredients for your evening guests</p>
-            <a href="#contact" class="btn light">Enquire Now ↗</a>
+            <a href="#contact" class="btn light arrows">Enquire Now ↗</a>
           </article>
         </div>
       </div>
@@ -907,7 +912,7 @@
               <textarea id="notes" placeholder="Share your venue, theme, or flavour ideas..."></textarea>
             </div>
             <div class="f-group full">
-              <button class="btn" type="button">Send Enquiry ↗</button>
+              <button class="btn arrows" type="button">Send Enquiry ↗</button>
             </div>
           </form>
         </div>

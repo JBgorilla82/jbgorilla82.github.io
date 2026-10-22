@@ -17,6 +17,11 @@
       background-image: url("https://images.pexels.com/photos/38781399/pexels-photo-38781399.jpeg?auto=compress&cs=tinysrgb&w=1400");
       background-size: cover; background-position: center;
     }
+    @supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
+      .arrows {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+    }
   </style>
 </head>
 <body>  <!-- REQUIRED CONCEPT BAR – TOP -->
@@ -43,7 +48,7 @@
       <p class="eyebrow">FLAT ROOFING SPECIALIST · LOCAL ROOFING · YOUR AREA</p>
       <h1>Flat roofing<br><em>Fair prices, lasting results</em></h1>
       <p class="hero-copy">Professional flat roof installation, replacement and repairs for homes and businesses for homes and businesses in your local area</p>
-      <div class="actions"><a class="btn btn-green" href="#contact">Request a free quote <span>↗</span></a><a class="btn btn-outline" href="tel:01202123456">☎ &nbsp; 01202 123 456</a></div>
+      <div class="actions"><a class="btn btn-green" href="#contact">Request a free quote <span class="arrows">↗</span></a><a class="btn btn-outline" href="tel:01202123456">☎ &nbsp; 01202 123 456</a></div>
       <div class="hero-trust"><span>✓ Domestic & trade</span><span>✓ Repairs & replacements</span><span>✓ Clear, friendly advice</span></div>
     </div>
     <div class="hero-image" role="img" aria-label="Stock photograph of a roofer working on a flat roof"></div>
