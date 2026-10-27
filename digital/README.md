@@ -1,4 +1,4 @@
-# Gorilla82 Help
+# Gorilla82 Digital
 
 Static site (HTML, CSS, JS) for GitHub Pages. No build step.
 

@@ -1,5 +1,5 @@
 /* =========================================================
-   Gorilla82 Help — site script
+   Gorilla82 Digital — site script
    ---------------------------------------------------------
    1. Fill in CONFIG below with your real links and email.
    2. Everything else works as-is on GitHub Pages.
@@ -23,7 +23,7 @@
       newsletter: "",
       techPack: "",        // Tech Help "Get Full Pack" buttons
       packFamily: "",      // Family Life Pack
-      packProductivity: "",// Busy Dad Productivity Pack
+      packProductivity: "",// Busy Parent Productivity Pack
       packSideHustle: "",  // Side Hustle Starter Pack
       packKids: ""         // Kids' Learning Pack
     }

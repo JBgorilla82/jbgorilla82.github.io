@@ -1,5 +1,5 @@
 /* =========================================================
-   Gorilla82 Help — stylesheet
+   Gorilla82 Digital — stylesheet
    ---------------------------------------------------------
    Colour theme: edit the variables in :root below and the
    whole site (all three pages) updates.
@@ -221,7 +221,7 @@ button { font: inherit; }
   font-weight: 800;
   letter-spacing: .01em;
 }
-.brand__help { color: var(--gold-hi); }
+.brand__digital { color: var(--gold-hi); }
 
 .site-nav ul { display: flex; align-items: center; gap: .15rem; }
 .site-nav a {
