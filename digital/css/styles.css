@@ -1001,6 +1001,73 @@ button { font: inherit; }
 .toast.is-visible { opacity: 1; transform: translate(-50%, 0); }
 
 /* ---------- Reduced motion ---------- */
+/* ---------- The 10 packs (product cards with photos) ---------- */
+@media (min-width: 1000px) {
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1150px) {
+  .product-grid { grid-template-columns: repeat(5, 1fr); }
+}
+.product { padding: 0; gap: 0; overflow: hidden; transition: border-color .2s, transform .2s; }
+.product:hover { border-color: var(--gold-dim); transform: translateY(-2px); }
+.product__media { display: block; background: var(--bg-deep); border-bottom: 1px solid var(--line); }
+.product__media img { display: block; width: 100%; height: auto; aspect-ratio: 700 / 668; object-fit: cover; }
+.product__body { display: flex; flex-direction: column; gap: .6rem; padding: 1.1rem 1.2rem 1.3rem; flex: 1; }
+.product__body h3 { font-size: 1.12rem; }
+.product__body p:not(.product__format) { font-size: .94rem; }
+.product__body .btn { margin-top: auto; align-self: flex-start; }
+.btn--sm { padding: .6rem 1.1rem; font-size: .92rem; }
+
+/* On phones, skip the decorative hero card so the packs come sooner */
+@media (max-width: 939px) {
+  .hero__visual { display: none; }
+}
+
+/* ---------- Coming soon ---------- */
+.soon {
+  display: inline-block;
+  margin-left: .45rem;
+  padding: .12rem .6rem;
+  border: 1px solid var(--gold-dim);
+  border-radius: 999px;
+  color: var(--gold-hi);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+.soon--sm { margin-left: .3rem; padding: 0 .4rem; font-size: .6rem; }
+.btn--soon,
+.btn--soon:hover {
+  border: 1.5px dashed var(--line-strong);
+  background: transparent;
+  color: var(--muted);
+  cursor: default;
+}
+.band .btn--soon,
+.band .btn--soon:hover,
+.service--feature .btn--soon,
+.service--feature .btn--soon:hover { border-color: rgba(23, 19, 10, .45); color: var(--on-gold); }
+.is-soon .tile,
+.is-soon .pod,
+.is-soon .pack,
+.is-soon .service,
+.is-soon .book-grid { opacity: .55; filter: grayscale(.4); }
+.reviews-soon { display: grid; justify-items: center; gap: 1rem; max-width: 40rem; margin: 0 auto; text-align: center; }
+.reviews-soon h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; letter-spacing: -.03em; line-height: 1.1; }
+.reviews-soon p:not(.tag) { color: var(--muted); }
+.soon-banner {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;
+  margin-top: 1.6rem; padding: 1.1rem 1.3rem;
+  border: 1px solid var(--gold-dim); border-radius: var(--radius); background: var(--bg-card);
+}
+.soon-banner p { color: var(--muted); }
+.is-soon-page .topic,
+.is-soon-page .pack,
+.is-soon-page .more { opacity: .6; filter: grayscale(.4); }
+.soon-banner strong { color: var(--text); }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {

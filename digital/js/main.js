@@ -15,7 +15,7 @@
     // Paste full URLs (https://...) between the quotes. While a link is empty,
     // its button shows a "Coming soon" message instead of going anywhere.
     links: {
-      etsy: "",            // Etsy shop
+      etsy: "https://www.etsy.com/shop/Gorilla82Digital", // Etsy shop (check this is your shop's address)
       pod: "",             // Print-on-demand shop
       book: "",            // "Read the Full Book Online — Free"
       youtube: "",
@@ -26,6 +26,22 @@
       packProductivity: "",// Busy Parent Productivity Pack
       packSideHustle: "",  // Side Hustle Starter Pack
       packKids: ""         // Kids' Learning Pack
+    },
+
+    // The 10 packs. Paste each Etsy listing URL once it's live
+    // (e.g. "https://www.etsy.com/listing/123456789/...").
+    // While a pack's link is empty, its buttons open the Etsy shop instead.
+    packs: {
+      meal: "",      // Family Meal Planner
+      chore: "",     // Kids' Chore Chart
+      weekly: "",    // Minimalist Weekly Planner
+      daily: "",     // Daily Focus Sheet
+      habit: "",     // Monthly Habit Tracker
+      budget: "",    // Budget Starter Spreadsheet
+      ats: "",       // ATS-Friendly CV Template
+      cover: "",     // Cover Letter Template
+      designer: "",  // Designer CV Template
+      job: ""        // Job Application Tracker
     }
   };
 
@@ -64,6 +80,30 @@
         toast("Coming soon. This link isn't live yet.");
       });
     }
+  });
+
+  /* ---------- The 10 packs: listing link, or the shop while it's empty ---------- */
+  document.querySelectorAll("[data-pack]").forEach(function (el) {
+    var url = (CONFIG.packs[el.getAttribute("data-pack")] || "").trim() || (CONFIG.links.etsy || "").trim();
+    if (url) {
+      el.setAttribute("href", url);
+      el.setAttribute("target", "_blank");
+      el.setAttribute("rel", "noopener noreferrer");
+    } else {
+      el.addEventListener("click", function (e) {
+        e.preventDefault();
+        toast("The Etsy shop opens soon.");
+      });
+    }
+  });
+
+  /* ---------- Coming-soon links: do nothing except say so ---------- */
+  document.querySelectorAll("[data-soon]").forEach(function (el) {
+    el.setAttribute("aria-disabled", "true");
+    el.addEventListener("click", function (e) {
+      e.preventDefault();
+      toast("Coming soon.");
+    });
   });
 
   /* ---------- Service order buttons ---------- */
@@ -135,7 +175,7 @@
       });
 
       if (countEl) {
-        countEl.textContent = "Showing " + shown + " of " + cards.length + " products";
+        countEl.textContent = "Showing " + shown + " of " + cards.length + " packs";
       }
     });
   });
