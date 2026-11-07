@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maisie Beedles – Art &amp; Design Portfolio</title>
+<meta name="description" content="Art and design portfolio of Maisie Beedles: graphic design, illustration, fashion design, drawing and mixed media.">
+<meta name="theme-color" content="#fff7fb">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23f8c9de'/%3E%3Cg fill='%23bfe0fb'%3E%3Ccircle cx='32' cy='16' r='9'/%3E%3Ccircle cx='48' cy='28' r='9'/%3E%3Ccircle cx='42' cy='46' r='9'/%3E%3Ccircle cx='22' cy='46' r='9'/%3E%3Ccircle cx='16' cy='28' r='9'/%3E%3C/g%3E%3Ccircle cx='32' cy='32' r='7' fill='%23fff7fb'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#work">Skip to my work</a>
+
+<header class="nav" id="top">
+  <a class="brand" href="#top" aria-label="Maisie Beedles, back to top"><span class="brand-mark">MB</span><span class="brand-name">Maisie Beedles</span></a>
+  <nav aria-label="Sections" class="nav-links" id="nav-links"></nav>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-text">
+      <p class="eyebrow">Art &amp; Design Portfolio</p>
+      <h1 id="hero-title">Maisie <span>Beedles</span></h1>
+      <p class="lead" id="hero-lead"></p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#work">See my work</a>
+        <button class="btn" id="play-all" type="button">▶ Start slideshow</button>
+      </div>
+      <p class="hint">Slideshow tips: <kbd>←</kbd> <kbd>→</kbd> to move, <kbd>N</kbd> for my notes, <kbd>F</kbd> for full screen, <kbd>Esc</kbd> to close.</p>
+    </div>
+    <div class="hero-art" aria-hidden="true" id="hero-art"></div>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <h2 class="section-title" id="about-title">About me</h2>
+      <div class="about-grid">
+        <div class="about-text" id="about-text"></div>
+        <div>
+          <h3 class="mini-title">Media &amp; skills</h3>
+          <ul class="chips" id="skills"></ul>
+        </div>
+      </div>
+      <h3 class="mini-title process-heading">How I work</h3>
+      <ol class="steps" id="steps"></ol>
+    </div>
+  </section>
+
+  <section class="work" id="work" aria-labelledby="work-title">
+    <div class="wrap">
+      <h2 class="section-title" id="work-title">My work</h2>
+      <p class="section-intro">Eight projects, from design briefs to drawing and mixed media. Choose one to jump straight to it. Every project starts with my finished pieces, then shows the research and sketches behind them.</p>
+      <div class="index" id="index"></div>
+    </div>
+    <div id="projects"></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>Maisie Beedles · Art &amp; Design Portfolio</p>
+  <p><a href="#top">Back to top ↑</a></p>
+</footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Image viewer">
+  <div class="lb-top">
+    <div class="lb-info"><span class="lb-proj" id="lb-proj"></span><span class="lb-count" id="lb-count"></span></div>
+    <div class="lb-tools">
+      <button type="button" id="lb-notes-btn" aria-pressed="false">Notes</button>
+      <button type="button" id="lb-fs">Full screen</button>
+      <button type="button" id="lb-close" aria-label="Close viewer">✕</button>
+    </div>
+  </div>
+  <button type="button" class="lb-nav prev" id="lb-prev" aria-label="Previous image">‹</button>
+  <figure class="lb-stage">
+    <img id="lb-img" alt="">
+    <figcaption><strong id="lb-title"></strong><span id="lb-cap"></span></figcaption>
+  </figure>
+  <button type="button" class="lb-nav next" id="lb-next" aria-label="Next image">›</button>
+  <aside class="lb-notes" id="lb-notes" hidden aria-label="Notes on this project"></aside>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
