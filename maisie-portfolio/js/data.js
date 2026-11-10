@@ -750,6 +750,133 @@ window.PORTFOLIO = {
      "h": 800
     }
    ]
+  },
+  {
+   "id": "pokemon",
+   "title": "Pokémon art",
+   "subtitle": "Pixel art, painted cards and character drawing",
+   "accent": "blue",
+   "tags": [
+    "Pixel art",
+    "Character drawing",
+    "Colour mixing",
+    "Painted cards"
+   ],
+   "blurb": "Work from outside my school projects: Pokémon pixel art coloured square by square, small painted cards, my own artwork added to energy cards, and a page of Trubbish studies.",
+   "facts": [
+    "Pixel art on grid paper: Charmander, Vaporeon, Leafeon, Espeon and Jolteon",
+    "Small painted cards and energy cards with my own drawings",
+    "A Trubbish page with colour swatches tested beside the drawing"
+   ],
+   "items": [
+    {
+     "img": "poke-cards-sheet",
+     "title": "All the cards together",
+     "caption": "The painted cards and the energy cards I added artwork to, laid out side by side.",
+     "featured": true,
+     "w": 708,
+     "h": 800
+    },
+    {
+     "img": "poke-trubbish",
+     "title": "Trubbish",
+     "caption": "A full page of Trubbish in different poses, with the colour swatches I tested beside it.",
+     "featured": true,
+     "w": 632,
+     "h": 800
+    },
+    {
+     "img": "poke-pixel-charmander",
+     "title": "Charmander pixel art",
+     "caption": "Coloured square by square on grid paper.",
+     "w": 800,
+     "h": 786
+    },
+    {
+     "img": "poke-pixel-vaporeon",
+     "title": "Vaporeon pixel art",
+     "caption": "Blues, black outlines and skin tones built up one square at a time.",
+     "w": 800,
+     "h": 798
+    },
+    {
+     "img": "poke-pixel-leafeon",
+     "title": "Leafeon pixel art",
+     "caption": "Greens and creams planned out on the grid.",
+     "w": 800,
+     "h": 799
+    },
+    {
+     "img": "poke-pixel-espeon",
+     "title": "Espeon pixel art",
+     "caption": "Pinks and purples, with strong dark outlines.",
+     "w": 800,
+     "h": 788
+    },
+    {
+     "img": "poke-pixel-jolteon",
+     "title": "Jolteon pixel art",
+     "caption": "Yellows and oranges with a cream chest.",
+     "w": 800,
+     "h": 792
+    },
+    {
+     "img": "poke-card-teddiursa",
+     "title": "Teddiursa",
+     "caption": "A small painted card: a moonlit night scene.",
+     "w": 407,
+     "h": 502
+    },
+    {
+     "img": "poke-card-vaporeon",
+     "title": "Vaporeon",
+     "caption": "A small painted card with a cloudy blue sky.",
+     "w": 412,
+     "h": 486
+    },
+    {
+     "img": "poke-card-rayquaza",
+     "title": "Rayquaza",
+     "caption": "A small painted card: Rayquaza above a big tree.",
+     "w": 435,
+     "h": 552
+    },
+    {
+     "img": "poke-card-charmander",
+     "title": "Charmander",
+     "caption": "A small painted card of Charmander asleep under a tree.",
+     "w": 439,
+     "h": 569
+    },
+    {
+     "img": "poke-card-ditto",
+     "title": "Ditto",
+     "caption": "A pattern of Ditto faces with one blue Ditto in the middle.",
+     "w": 455,
+     "h": 564
+    },
+    {
+     "img": "poke-card-cleffa",
+     "title": "Cleffa energy card",
+     "caption": "My own Cleffa drawn on a Psychic energy card.",
+     "w": 465,
+     "h": 687
+    },
+    {
+     "img": "poke-card-espeon",
+     "title": "Espeon energy card",
+     "caption": "My own Espeon drawn on a Psychic energy card.",
+     "w": 486,
+     "h": 674
+    },
+    {
+     "img": "poke-card-charizard",
+     "title": "Charizard energy card",
+     "caption": "My own Charizard drawn on a Fire energy card.",
+     "w": 473,
+     "h": 672
+    }
+   ]
   }
  ]
 };
