@@ -754,18 +754,20 @@ window.PORTFOLIO = {
   {
    "id": "pokemon",
    "title": "Pokémon art",
-   "subtitle": "Pixel art, painted cards and character drawing",
+   "subtitle": "Pixel art, painted cards, a phone case and character drawing",
    "accent": "blue",
    "tags": [
     "Pixel art",
     "Character drawing",
     "Colour mixing",
-    "Painted cards"
+    "Painted cards",
+    "Phone case design"
    ],
-   "blurb": "Work from outside my school projects: Pokémon pixel art coloured square by square, small painted cards, my own artwork added to energy cards, and a page of Trubbish studies.",
+   "blurb": "Work from outside my school projects: Pokémon pixel art coloured square by square, small painted cards, my own artwork added to energy cards, a phone case I designed, and a page of Trubbish studies.",
    "facts": [
     "Pixel art on grid paper: Charmander, Vaporeon, Leafeon, Espeon and Jolteon",
     "Small painted cards and energy cards with my own drawings",
+    "A phone case design with Jigglypuff and Butterfree",
     "A Trubbish page with colour swatches tested beside the drawing"
    ],
    "items": [
@@ -783,6 +785,13 @@ window.PORTFOLIO = {
      "caption": "A full page of Trubbish in different poses, with the colour swatches I tested beside it.",
      "featured": true,
      "w": 632,
+     "h": 800
+    },
+    {
+     "img": "poke-phone-case",
+     "title": "Phone case design",
+     "caption": "A phone case I designed: Jigglypuff on the grass with a Butterfree in the sky.",
+     "w": 421,
      "h": 800
     },
     {
